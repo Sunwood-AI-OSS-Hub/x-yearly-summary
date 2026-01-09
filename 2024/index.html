@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Archives 2024 | Tokiwavalley Edition</title>
+    <title>Project Archives 2024</title>
 
     <!-- Google Fonts: Noto Serif JP (和風/雅), Orbitron (近未来/クール) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&family=Orbitron:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&family=Orbitron:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;500&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #050505; /* 墨色 */
+            --bg-color: #050505;
+            /* 墨色 */
             --card-bg: rgba(20, 20, 25, 0.6);
             --text-main: #e0e0e0;
-            --accent-gold: #d4af37; /* 金箔 */
-            --accent-cyan: #00f0ff; /* 未来光 */
+            --accent-gold: #d4af37;
+            /* 金箔 */
+            --accent-cyan: #00f0ff;
+            /* 未来光 */
             --accent-ink: #2b2b2b;
             --border-gold: rgba(212, 175, 55, 0.3);
             --border-cyan: rgba(0, 240, 255, 0.3);
@@ -59,7 +65,9 @@
             z-index: 1;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: var(--font-serif);
             font-weight: 700;
         }
@@ -311,9 +319,11 @@
         .tweet-list::-webkit-scrollbar {
             width: 6px;
         }
+
         .tweet-list::-webkit-scrollbar-track {
             background: #000;
         }
+
         .tweet-list::-webkit-scrollbar-thumb {
             background: var(--border-gold);
         }
@@ -374,6 +384,7 @@
                 flex-direction: column;
                 gap: 20px;
             }
+
             .author-info {
                 border-right: none;
                 border-bottom: 2px solid var(--border-gold);
@@ -381,6 +392,7 @@
                 padding-bottom: 20px;
                 text-align: center;
             }
+
             h1.main-title {
                 height: auto;
                 writing-mode: horizontal-tb;
@@ -390,9 +402,11 @@
                 padding-left: 0;
                 font-size: 3.5rem;
             }
+
             .grid {
                 grid-template-columns: 1fr;
             }
+
             .subtitle {
                 position: static;
                 display: block;
@@ -400,6 +414,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <canvas id="bg-canvas"></canvas>
@@ -413,7 +428,7 @@
                 </div>
                 <h1 class="main-title">Project Archives</h1>
             </div>
-            <div class="subtitle">TOKIWAVALLEY EDITION // 2024</div>
+            <div class="subtitle">2024</div>
 
             <nav>
                 <a href="../index.html">← トップに戻る</a>
@@ -446,7 +461,7 @@
                 <a href="https://hamaruki.com/" target="_blank">Blog</a>
             </div>
             <div class="copyright">
-                &copy; 2024 Tokiwavalley Project Archives. All Rights Reserved.
+                &copy; 2024 Project Archives. All Rights Reserved.
             </div>
         </footer>
     </div>
@@ -552,7 +567,7 @@
 
                     if (dist < 150) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(212, 175, 55, ${0.1 - dist/1500})`;
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${0.1 - dist / 1500})`;
                         ctx.lineWidth = 0.5;
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
@@ -573,4 +588,5 @@
         animate();
     </script>
 </body>
+
 </html>

@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Archives 2025 | Tokiwavalley Edition</title>
+    <title>Project Archives 2025</title>
 
     <!-- Google Fonts: Noto Serif JP (和風/雅), Orbitron (近未来/クール) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&family=Orbitron:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;500;700&family=Orbitron:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;500&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
-            --bg-color: #050505; /* 墨色 */
+            --bg-color: #050505;
+            /* 墨色 */
             --card-bg: rgba(20, 20, 25, 0.6);
             --text-main: #e0e0e0;
-            --accent-gold: #d4af37; /* 金箔 */
-            --accent-cyan: #00f0ff; /* 未来光 */
+            --accent-gold: #d4af37;
+            /* 金箔 */
+            --accent-cyan: #00f0ff;
+            /* 未来光 */
             --accent-ink: #2b2b2b;
             --border-gold: rgba(212, 175, 55, 0.3);
             --border-cyan: rgba(0, 240, 255, 0.3);
@@ -59,7 +65,9 @@
             z-index: 1;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: var(--font-serif);
             font-weight: 700;
         }
@@ -303,7 +311,8 @@
         }
 
         .tweet-list.open {
-            max-height: 300px; /* Limit height with scroll */
+            max-height: 300px;
+            /* Limit height with scroll */
             overflow-y: auto;
         }
 
@@ -311,9 +320,11 @@
         .tweet-list::-webkit-scrollbar {
             width: 6px;
         }
+
         .tweet-list::-webkit-scrollbar-track {
             background: #000;
         }
+
         .tweet-list::-webkit-scrollbar-thumb {
             background: var(--border-gold);
         }
@@ -374,6 +385,7 @@
                 flex-direction: column;
                 gap: 20px;
             }
+
             .author-info {
                 border-right: none;
                 border-bottom: 2px solid var(--border-gold);
@@ -381,6 +393,7 @@
                 padding-bottom: 20px;
                 text-align: center;
             }
+
             h1.main-title {
                 height: auto;
                 writing-mode: horizontal-tb;
@@ -390,9 +403,11 @@
                 padding-left: 0;
                 font-size: 3.5rem;
             }
+
             .grid {
                 grid-template-columns: 1fr;
             }
+
             .subtitle {
                 position: static;
                 display: block;
@@ -400,6 +415,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <canvas id="bg-canvas"></canvas>
@@ -413,7 +429,7 @@
                 </div>
                 <h1 class="main-title">Project Archives</h1>
             </div>
-            <div class="subtitle">TOKIWAVALLEY EDITION // 2025</div>
+            <div class="subtitle">2025</div>
 
             <nav>
                 <a href="../index.html">← トップに戻る</a>
@@ -438,20 +454,28 @@
                     <h3>セキュリティ学習</h3>
                     <p>WSLにKali Linuxインストール、Google Antigravity連携。Hack The Box課題クリア(Flag Command、SpookyPass)。</p>
                     <div class="links">
-                        <a href="https://note.com/sunwood_ai_labs/n/n4d60f68adbf2" target="_blank" class="link-btn">📄 記事を読む</a>
+                        <a href="https://note.com/sunwood_ai_labs/n/n4d60f68adbf2" target="_blank" class="link-btn">📄
+                            記事を読む</a>
                     </div>
                     <button class="tweet-accordion" onclick="toggleTweets(this)">
                         <span>SHOW TWEETS (7)</span>
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2006349248879788475" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2006349248879788475</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005977969127481766" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2005977969127481766</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005975636293345790" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2005975636293345790</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005973624914874674" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2005973624914874674</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005702893601730659" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2005702893601730659</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005663411909300641" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2005663411909300641</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005657344773177450" target="_blank" class="tweet-item">x.com/hAru_mAki_ch/status/2005657344773177450</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006349248879788475" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2006349248879788475</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005977969127481766" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2005977969127481766</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005975636293345790" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2005975636293345790</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005973624914874674" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2005973624914874674</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005702893601730659" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2005702893601730659</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005663411909300641" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2005663411909300641</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005657344773177450" target="_blank"
+                            class="tweet-item">x.com/hAru_mAki_ch/status/2005657344773177450</a>
                     </div>
                 </div>
 
@@ -461,49 +485,86 @@
                     <h3>年賀状プロンプト集</h3>
                     <p>ステンドグラス、少年マンガ表紙風、大正浪漫、水墨画×金箔、HD-2D等14種以上のオリキャラ年賀状プロンプト。</p>
                     <div class="links">
-                        <a href="https://note.com/sunwood_ai_labs/n/n2bc46e31ac2f" target="_blank" class="link-btn">📄 記事を読む</a>
+                        <a href="https://note.com/sunwood_ai_labs/n/n2bc46e31ac2f" target="_blank" class="link-btn">📄
+                            記事を読む</a>
                     </div>
                     <button class="tweet-accordion" onclick="toggleTweets(this)">
                         <span>SHOW TWEETS (36)</span>
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2006349145494438047" target="_blank" class="tweet-item">Status 2006349145494438047</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006349143476945369" target="_blank" class="tweet-item">Status 2006349143476945369</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006348327684902936" target="_blank" class="tweet-item">Status 2006348327684902936</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006344273919365598" target="_blank" class="tweet-item">Status 2006344273919365598</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006344267242115240" target="_blank" class="tweet-item">Status 2006344267242115240</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006343975477891313" target="_blank" class="tweet-item">Status 2006343975477891313</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006343971858198809" target="_blank" class="tweet-item">Status 2006343971858198809</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006343422500880597" target="_blank" class="tweet-item">Status 2006343422500880597</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006343419178963188" target="_blank" class="tweet-item">Status 2006343419178963188</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006342435941896488" target="_blank" class="tweet-item">Status 2006342435941896488</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006342432225718510" target="_blank" class="tweet-item">Status 2006342432225718510</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006339599233372548" target="_blank" class="tweet-item">Status 2006339599233372548</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006339595894731226" target="_blank" class="tweet-item">Status 2006339595894731226</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006339153957630108" target="_blank" class="tweet-item">Status 2006339153957630108</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006339150375735697" target="_blank" class="tweet-item">Status 2006339150375735697</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006338057415594450" target="_blank" class="tweet-item">Status 2006338057415594450</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006338054081159373" target="_blank" class="tweet-item">Status 2006338054081159373</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006337703521194437" target="_blank" class="tweet-item">Status 2006337703521194437</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006337700018942194" target="_blank" class="tweet-item">Status 2006337700018942194</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006337420267225118" target="_blank" class="tweet-item">Status 2006337420267225118</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006337416131498308" target="_blank" class="tweet-item">Status 2006337416131498308</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006337178985783338" target="_blank" class="tweet-item">Status 2006337178985783338</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006337175076434033" target="_blank" class="tweet-item">Status 2006337175076434033</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006333449905623373" target="_blank" class="tweet-item">Status 2006333449905623373</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006333446814400992" target="_blank" class="tweet-item">Status 2006333446814400992</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006333194434703833" target="_blank" class="tweet-item">Status 2006333194434703833</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006333189292454292" target="_blank" class="tweet-item">Status 2006333189292454292</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006332825520484719" target="_blank" class="tweet-item">Status 2006332825520484719</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006332821514711202" target="_blank" class="tweet-item">Status 2006332821514711202</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006332547228381342" target="_blank" class="tweet-item">Status 2006332547228381342</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006332543675539892" target="_blank" class="tweet-item">Status 2006332543675539892</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006332190859411757" target="_blank" class="tweet-item">Status 2006332190859411757</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006332188015591609" target="_blank" class="tweet-item">Status 2006332188015591609</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006330681815884121" target="_blank" class="tweet-item">Status 2006330681815884121</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006330678464700847" target="_blank" class="tweet-item">Status 2006330678464700847</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006314582709846474" target="_blank" class="tweet-item">Status 2006314582709846474</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006349145494438047" target="_blank"
+                            class="tweet-item">Status 2006349145494438047</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006349143476945369" target="_blank"
+                            class="tweet-item">Status 2006349143476945369</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006348327684902936" target="_blank"
+                            class="tweet-item">Status 2006348327684902936</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006344273919365598" target="_blank"
+                            class="tweet-item">Status 2006344273919365598</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006344267242115240" target="_blank"
+                            class="tweet-item">Status 2006344267242115240</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006343975477891313" target="_blank"
+                            class="tweet-item">Status 2006343975477891313</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006343971858198809" target="_blank"
+                            class="tweet-item">Status 2006343971858198809</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006343422500880597" target="_blank"
+                            class="tweet-item">Status 2006343422500880597</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006343419178963188" target="_blank"
+                            class="tweet-item">Status 2006343419178963188</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006342435941896488" target="_blank"
+                            class="tweet-item">Status 2006342435941896488</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006342432225718510" target="_blank"
+                            class="tweet-item">Status 2006342432225718510</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006339599233372548" target="_blank"
+                            class="tweet-item">Status 2006339599233372548</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006339595894731226" target="_blank"
+                            class="tweet-item">Status 2006339595894731226</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006339153957630108" target="_blank"
+                            class="tweet-item">Status 2006339153957630108</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006339150375735697" target="_blank"
+                            class="tweet-item">Status 2006339150375735697</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006338057415594450" target="_blank"
+                            class="tweet-item">Status 2006338057415594450</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006338054081159373" target="_blank"
+                            class="tweet-item">Status 2006338054081159373</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006337703521194437" target="_blank"
+                            class="tweet-item">Status 2006337703521194437</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006337700018942194" target="_blank"
+                            class="tweet-item">Status 2006337700018942194</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006337420267225118" target="_blank"
+                            class="tweet-item">Status 2006337420267225118</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006337416131498308" target="_blank"
+                            class="tweet-item">Status 2006337416131498308</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006337178985783338" target="_blank"
+                            class="tweet-item">Status 2006337178985783338</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006337175076434033" target="_blank"
+                            class="tweet-item">Status 2006337175076434033</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006333449905623373" target="_blank"
+                            class="tweet-item">Status 2006333449905623373</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006333446814400992" target="_blank"
+                            class="tweet-item">Status 2006333446814400992</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006333194434703833" target="_blank"
+                            class="tweet-item">Status 2006333194434703833</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006333189292454292" target="_blank"
+                            class="tweet-item">Status 2006333189292454292</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006332825520484719" target="_blank"
+                            class="tweet-item">Status 2006332825520484719</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006332821514711202" target="_blank"
+                            class="tweet-item">Status 2006332821514711202</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006332547228381342" target="_blank"
+                            class="tweet-item">Status 2006332547228381342</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006332543675539892" target="_blank"
+                            class="tweet-item">Status 2006332543675539892</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006332190859411757" target="_blank"
+                            class="tweet-item">Status 2006332190859411757</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006332188015591609" target="_blank"
+                            class="tweet-item">Status 2006332188015591609</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006330681815884121" target="_blank"
+                            class="tweet-item">Status 2006330681815884121</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006330678464700847" target="_blank"
+                            class="tweet-item">Status 2006330678464700847</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006314582709846474" target="_blank"
+                            class="tweet-item">Status 2006314582709846474</a>
                     </div>
                 </div>
 
@@ -517,12 +578,18 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2006314070908313663" target="_blank" class="tweet-item">Status 2006314070908313663</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006308989357924692" target="_blank" class="tweet-item">Status 2006308989357924692</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006303339018068034" target="_blank" class="tweet-item">Status 2006303339018068034</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006303040522117362" target="_blank" class="tweet-item">Status 2006303040522117362</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006279875645284466" target="_blank" class="tweet-item">Status 2006279875645284466</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006278958955000226" target="_blank" class="tweet-item">Status 2006278958955000226</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006314070908313663" target="_blank"
+                            class="tweet-item">Status 2006314070908313663</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006308989357924692" target="_blank"
+                            class="tweet-item">Status 2006308989357924692</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006303339018068034" target="_blank"
+                            class="tweet-item">Status 2006303339018068034</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006303040522117362" target="_blank"
+                            class="tweet-item">Status 2006303040522117362</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006279875645284466" target="_blank"
+                            class="tweet-item">Status 2006279875645284466</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006278958955000226" target="_blank"
+                            class="tweet-item">Status 2006278958955000226</a>
                     </div>
                 </div>
 
@@ -536,21 +603,31 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2005566295753015433" target="_blank" class="tweet-item">Status 2005566295753015433</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005309428476813330" target="_blank" class="tweet-item">Status 2005309428476813330</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005308371176681505" target="_blank" class="tweet-item">Status 2005308371176681505</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005305382617629074" target="_blank" class="tweet-item">Status 2005305382617629074</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005297295848513684" target="_blank" class="tweet-item">Status 2005297295848513684</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005297292354687349" target="_blank" class="tweet-item">Status 2005297292354687349</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005297289036968370" target="_blank" class="tweet-item">Status 2005297289036968370</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005292948255293723" target="_blank" class="tweet-item">Status 2005292948255293723</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005281473591755159" target="_blank" class="tweet-item">Status 2005281473591755159</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005281470064287866" target="_blank" class="tweet-item">Status 2005281470064287866</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005566295753015433" target="_blank"
+                            class="tweet-item">Status 2005566295753015433</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005309428476813330" target="_blank"
+                            class="tweet-item">Status 2005309428476813330</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005308371176681505" target="_blank"
+                            class="tweet-item">Status 2005308371176681505</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005305382617629074" target="_blank"
+                            class="tweet-item">Status 2005305382617629074</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005297295848513684" target="_blank"
+                            class="tweet-item">Status 2005297295848513684</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005297292354687349" target="_blank"
+                            class="tweet-item">Status 2005297292354687349</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005297289036968370" target="_blank"
+                            class="tweet-item">Status 2005297289036968370</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005292948255293723" target="_blank"
+                            class="tweet-item">Status 2005292948255293723</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005281473591755159" target="_blank"
+                            class="tweet-item">Status 2005281473591755159</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005281470064287866" target="_blank"
+                            class="tweet-item">Status 2005281470064287866</a>
                     </div>
                 </div>
 
-                 <!-- Card 5 -->
-                 <div class="card">
+                <!-- Card 5 -->
+                <div class="card">
                     <span class="card-icon">🌐</span>
                     <h3>Google Antigravity ZERO_GRAVITY</h3>
                     <p>ルールとワークフロー一式を生成するワークスペース。ViduQ2+SUNO用コンペ向けワークスペース作成。</p>
@@ -559,12 +636,18 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2006405500011983120" target="_blank" class="tweet-item">Status 2006405500011983120</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005971243120689482" target="_blank" class="tweet-item">Status 2005971243120689482</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006329106162700481" target="_blank" class="tweet-item">Status 2006329106162700481</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006327200866578550" target="_blank" class="tweet-item">Status 2006327200866578550</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006323753752658201" target="_blank" class="tweet-item">Status 2006323753752658201</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2005876158936838202" target="_blank" class="tweet-item">Status 2005876158936838202</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006405500011983120" target="_blank"
+                            class="tweet-item">Status 2006405500011983120</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005971243120689482" target="_blank"
+                            class="tweet-item">Status 2005971243120689482</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006329106162700481" target="_blank"
+                            class="tweet-item">Status 2006329106162700481</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006327200866578550" target="_blank"
+                            class="tweet-item">Status 2006327200866578550</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006323753752658201" target="_blank"
+                            class="tweet-item">Status 2006323753752658201</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2005876158936838202" target="_blank"
+                            class="tweet-item">Status 2005876158936838202</a>
                     </div>
                 </div>
 
@@ -574,18 +657,24 @@
                     <h3>qwen-image-2512 テスト</h3>
                     <p>最強クラスOSS画像生成モデル。リアル画像、プロダクトフォト、日本語テキスト対応。</p>
                     <div class="links">
-                        <a href="https://note.com/sunwood_ai_labs/n/na929f66b918e" target="_blank" class="link-btn">📄 記事を読む</a>
+                        <a href="https://note.com/sunwood_ai_labs/n/na929f66b918e" target="_blank" class="link-btn">📄
+                            記事を読む</a>
                     </div>
                     <button class="tweet-accordion" onclick="toggleTweets(this)">
                         <span>SHOW TWEETS (5)</span>
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2006372294365724681" target="_blank" class="tweet-item">Status 2006372294365724681</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006365625254642125" target="_blank" class="tweet-item">Status 2006365625254642125</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006365621332967733" target="_blank" class="tweet-item">Status 2006365621332967733</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006334354021290015" target="_blank" class="tweet-item">Status 2006334354021290015</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2006334440495337939" target="_blank" class="tweet-item">Status 2006334440495337939</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006372294365724681" target="_blank"
+                            class="tweet-item">Status 2006372294365724681</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006365625254642125" target="_blank"
+                            class="tweet-item">Status 2006365625254642125</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006365621332967733" target="_blank"
+                            class="tweet-item">Status 2006365621332967733</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006334354021290015" target="_blank"
+                            class="tweet-item">Status 2006334354021290015</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2006334440495337939" target="_blank"
+                            class="tweet-item">Status 2006334440495337939</a>
                     </div>
                 </div>
 
@@ -595,7 +684,8 @@
         <!-- 12月前半 -->
         <section id="dec-early">
             <div class="section-header">
-                <div class="section-month">DEC <span style="font-size:1rem; color:var(--accent-gold);">Early</span></div>
+                <div class="section-month">DEC <span style="font-size:1rem; color:var(--accent-gold);">Early</span>
+                </div>
                 <div class="section-desc">Automation, Repositories & Magazines</div>
             </div>
             <div class="grid">
@@ -609,10 +699,14 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2000631622014800039" target="_blank" class="tweet-item">Status 2000631622014800039</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000631619754107245" target="_blank" class="tweet-item">Status 2000631619754107245</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000631617514254743" target="_blank" class="tweet-item">Status 2000631617514254743</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000631613919768727" target="_blank" class="tweet-item">Status 2000631613919768727</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000631622014800039" target="_blank"
+                            class="tweet-item">Status 2000631622014800039</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000631619754107245" target="_blank"
+                            class="tweet-item">Status 2000631619754107245</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000631617514254743" target="_blank"
+                            class="tweet-item">Status 2000631617514254743</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000631613919768727" target="_blank"
+                            class="tweet-item">Status 2000631613919768727</a>
                     </div>
                 </div>
 
@@ -625,19 +719,32 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2000442068175552695" target="_blank" class="tweet-item">Status 2000442068175552695</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000442064916635695" target="_blank" class="tweet-item">Status 2000442064916635695</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000440520154468570" target="_blank" class="tweet-item">Status 2000440520154468570</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000436720937161022" target="_blank" class="tweet-item">Status 2000436720937161022</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000436484084470228" target="_blank" class="tweet-item">Status 2000436484084470228</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000431815258251438" target="_blank" class="tweet-item">Status 2000431815258251438</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000431812750012558" target="_blank" class="tweet-item">Status 2000431812750012558</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000431201480483092" target="_blank" class="tweet-item">Status 2000431201480483092</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000431199240769837" target="_blank" class="tweet-item">Status 2000431199240769837</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000421564374982911" target="_blank" class="tweet-item">Status 2000421564374982911</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000419773457596750" target="_blank" class="tweet-item">Status 2000419773457596750</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000419195641852298" target="_blank" class="tweet-item">Status 2000419195641852298</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000415692844093619" target="_blank" class="tweet-item">Status 2000415692844093619</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000442068175552695" target="_blank"
+                            class="tweet-item">Status 2000442068175552695</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000442064916635695" target="_blank"
+                            class="tweet-item">Status 2000442064916635695</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000440520154468570" target="_blank"
+                            class="tweet-item">Status 2000440520154468570</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000436720937161022" target="_blank"
+                            class="tweet-item">Status 2000436720937161022</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000436484084470228" target="_blank"
+                            class="tweet-item">Status 2000436484084470228</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000431815258251438" target="_blank"
+                            class="tweet-item">Status 2000431815258251438</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000431812750012558" target="_blank"
+                            class="tweet-item">Status 2000431812750012558</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000431201480483092" target="_blank"
+                            class="tweet-item">Status 2000431201480483092</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000431199240769837" target="_blank"
+                            class="tweet-item">Status 2000431199240769837</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000421564374982911" target="_blank"
+                            class="tweet-item">Status 2000421564374982911</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000419773457596750" target="_blank"
+                            class="tweet-item">Status 2000419773457596750</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000419195641852298" target="_blank"
+                            class="tweet-item">Status 2000419195641852298</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000415692844093619" target="_blank"
+                            class="tweet-item">Status 2000415692844093619</a>
                     </div>
                 </div>
 
@@ -650,10 +757,14 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/2000588723503714618" target="_blank" class="tweet-item">Status 2000588723503714618</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000587839352803499" target="_blank" class="tweet-item">Status 2000587839352803499</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000586248097005916" target="_blank" class="tweet-item">Status 2000586248097005916</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/2000504884534395341" target="_blank" class="tweet-item">Status 2000504884534395341</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000588723503714618" target="_blank"
+                            class="tweet-item">Status 2000588723503714618</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000587839352803499" target="_blank"
+                            class="tweet-item">Status 2000587839352803499</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000586248097005916" target="_blank"
+                            class="tweet-item">Status 2000586248097005916</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/2000504884534395341" target="_blank"
+                            class="tweet-item">Status 2000504884534395341</a>
                     </div>
                 </div>
 
@@ -673,19 +784,26 @@
                     <h3>ニコニコ弾幕マルチエージェント</h3>
                     <p>動画や記事を解析してニコニコ動画風弾幕コメントをJSON形式で生成。複数ペルソナをシミュレート。Gemini 3.0対応。</p>
                     <div class="links">
-                        <a href="https://gemini.google.com/gem/1TBJOXZjj8oVcY_gVsYHTL-2eIfECQCf4?usp=sharing" target="_blank" class="link-btn">💎 Gemini</a>
+                        <a href="https://gemini.google.com/gem/1TBJOXZjj8oVcY_gVsYHTL-2eIfECQCf4?usp=sharing"
+                            target="_blank" class="link-btn">💎 Gemini</a>
                     </div>
                     <button class="tweet-accordion" onclick="toggleTweets(this)">
                         <span>SHOW TWEETS (6)</span>
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1995538630304264448" target="_blank" class="tweet-item">Status 1995538630304264448</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995538446241464536" target="_blank" class="tweet-item">Status 1995538446241464536</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983104214512611615" target="_blank" class="tweet-item">Status 1983104214512611615</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1982002495766298767" target="_blank" class="tweet-item">Status 1982002495766298767</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1982001506397401314" target="_blank" class="tweet-item">Status 1982001506397401314</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1981999309051568336" target="_blank" class="tweet-item">Status 1981999309051568336</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995538630304264448" target="_blank"
+                            class="tweet-item">Status 1995538630304264448</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995538446241464536" target="_blank"
+                            class="tweet-item">Status 1995538446241464536</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983104214512611615" target="_blank"
+                            class="tweet-item">Status 1983104214512611615</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1982002495766298767" target="_blank"
+                            class="tweet-item">Status 1982002495766298767</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1982001506397401314" target="_blank"
+                            class="tweet-item">Status 1982001506397401314</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1981999309051568336" target="_blank"
+                            class="tweet-item">Status 1981999309051568336</a>
                     </div>
                 </div>
 
@@ -698,13 +816,20 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1995206394384089527" target="_blank" class="tweet-item">Status 1995206394384089527</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995066492052963534" target="_blank" class="tweet-item">Status 1995066492052963534</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995066495605547479" target="_blank" class="tweet-item">Status 1995066495605547479</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995060014541934693" target="_blank" class="tweet-item">Status 1995060014541934693</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1994851902119711206" target="_blank" class="tweet-item">Status 1994851902119711206</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1994851907681358308" target="_blank" class="tweet-item">Status 1994851907681358308</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1994850512764899453" target="_blank" class="tweet-item">Status 1994850512764899453</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995206394384089527" target="_blank"
+                            class="tweet-item">Status 1995206394384089527</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995066492052963534" target="_blank"
+                            class="tweet-item">Status 1995066492052963534</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995066495605547479" target="_blank"
+                            class="tweet-item">Status 1995066495605547479</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995060014541934693" target="_blank"
+                            class="tweet-item">Status 1995060014541934693</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1994851902119711206" target="_blank"
+                            class="tweet-item">Status 1994851902119711206</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1994851907681358308" target="_blank"
+                            class="tweet-item">Status 1994851907681358308</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1994850512764899453" target="_blank"
+                            class="tweet-item">Status 1994850512764899453</a>
                     </div>
                 </div>
 
@@ -717,36 +842,66 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201294148260095" target="_blank" class="tweet-item">Status 1995201294148260095</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201298338386193" target="_blank" class="tweet-item">Status 1995201298338386193</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201302528422325" target="_blank" class="tweet-item">Status 1995201302528422325</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201306399748603" target="_blank" class="tweet-item">Status 1995201306399748603</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201310149517395" target="_blank" class="tweet-item">Status 1995201310149517395</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201313957888323" target="_blank" class="tweet-item">Status 1995201313957888323</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201317841916292" target="_blank" class="tweet-item">Status 1995201317841916292</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201321499312563" target="_blank" class="tweet-item">Status 1995201321499312563</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201325257404844" target="_blank" class="tweet-item">Status 1995201325257404844</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201328940019913" target="_blank" class="tweet-item">Status 1995201328940019913</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201332471554500" target="_blank" class="tweet-item">Status 1995201332471554500</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201336275824877" target="_blank" class="tweet-item">Status 1995201336275824877</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201340293935447" target="_blank" class="tweet-item">Status 1995201340293935447</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201344005959923" target="_blank" class="tweet-item">Status 1995201344005959923</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201348212822377" target="_blank" class="tweet-item">Status 1995201348212822377</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995201351694090425" target="_blank" class="tweet-item">Status 1995201351694090425</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995208776467804372" target="_blank" class="tweet-item">Status 1995208776467804372</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995209377918398503" target="_blank" class="tweet-item">Status 1995209377918398503</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995163467251429602" target="_blank" class="tweet-item">Status 1995163467251429602</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995168145720713410" target="_blank" class="tweet-item">Status 1995168145720713410</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151673464107115" target="_blank" class="tweet-item">Status 1995151673464107115</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151677234815254" target="_blank" class="tweet-item">Status 1995151677234815254</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151680594403654" target="_blank" class="tweet-item">Status 1995151680594403654</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151683832467583" target="_blank" class="tweet-item">Status 1995151683832467583</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151687116578948" target="_blank" class="tweet-item">Status 1995151687116578948</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151690492952830" target="_blank" class="tweet-item">Status 1995151690492952830</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151693944938653" target="_blank" class="tweet-item">Status 1995151693944938653</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151697640136766" target="_blank" class="tweet-item">Status 1995151697640136766</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995151700911603741" target="_blank" class="tweet-item">Status 1995151700911603741</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995146453392765163" target="_blank" class="tweet-item">Status 1995146453392765163</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201294148260095" target="_blank"
+                            class="tweet-item">Status 1995201294148260095</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201298338386193" target="_blank"
+                            class="tweet-item">Status 1995201298338386193</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201302528422325" target="_blank"
+                            class="tweet-item">Status 1995201302528422325</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201306399748603" target="_blank"
+                            class="tweet-item">Status 1995201306399748603</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201310149517395" target="_blank"
+                            class="tweet-item">Status 1995201310149517395</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201313957888323" target="_blank"
+                            class="tweet-item">Status 1995201313957888323</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201317841916292" target="_blank"
+                            class="tweet-item">Status 1995201317841916292</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201321499312563" target="_blank"
+                            class="tweet-item">Status 1995201321499312563</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201325257404844" target="_blank"
+                            class="tweet-item">Status 1995201325257404844</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201328940019913" target="_blank"
+                            class="tweet-item">Status 1995201328940019913</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201332471554500" target="_blank"
+                            class="tweet-item">Status 1995201332471554500</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201336275824877" target="_blank"
+                            class="tweet-item">Status 1995201336275824877</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201340293935447" target="_blank"
+                            class="tweet-item">Status 1995201340293935447</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201344005959923" target="_blank"
+                            class="tweet-item">Status 1995201344005959923</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201348212822377" target="_blank"
+                            class="tweet-item">Status 1995201348212822377</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995201351694090425" target="_blank"
+                            class="tweet-item">Status 1995201351694090425</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995208776467804372" target="_blank"
+                            class="tweet-item">Status 1995208776467804372</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995209377918398503" target="_blank"
+                            class="tweet-item">Status 1995209377918398503</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995163467251429602" target="_blank"
+                            class="tweet-item">Status 1995163467251429602</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995168145720713410" target="_blank"
+                            class="tweet-item">Status 1995168145720713410</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151673464107115" target="_blank"
+                            class="tweet-item">Status 1995151673464107115</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151677234815254" target="_blank"
+                            class="tweet-item">Status 1995151677234815254</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151680594403654" target="_blank"
+                            class="tweet-item">Status 1995151680594403654</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151683832467583" target="_blank"
+                            class="tweet-item">Status 1995151683832467583</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151687116578948" target="_blank"
+                            class="tweet-item">Status 1995151687116578948</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151690492952830" target="_blank"
+                            class="tweet-item">Status 1995151690492952830</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151693944938653" target="_blank"
+                            class="tweet-item">Status 1995151693944938653</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151697640136766" target="_blank"
+                            class="tweet-item">Status 1995151697640136766</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995151700911603741" target="_blank"
+                            class="tweet-item">Status 1995151700911603741</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995146453392765163" target="_blank"
+                            class="tweet-item">Status 1995146453392765163</a>
                     </div>
                 </div>
 
@@ -759,12 +914,18 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1994858166727971214" target="_blank" class="tweet-item">Status 1994858166727971214</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995034356210122802" target="_blank" class="tweet-item">Status 1995034356210122802</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995053724528730384" target="_blank" class="tweet-item">Status 1995053724528730384</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995140880685203588" target="_blank" class="tweet-item">Status 1995140880685203588</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995122300635811928" target="_blank" class="tweet-item">Status 1995122300635811928</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1995122307258335521" target="_blank" class="tweet-item">Status 1995122307258335521</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1994858166727971214" target="_blank"
+                            class="tweet-item">Status 1994858166727971214</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995034356210122802" target="_blank"
+                            class="tweet-item">Status 1995034356210122802</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995053724528730384" target="_blank"
+                            class="tweet-item">Status 1995053724528730384</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995140880685203588" target="_blank"
+                            class="tweet-item">Status 1995140880685203588</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995122300635811928" target="_blank"
+                            class="tweet-item">Status 1995122300635811928</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995122307258335521" target="_blank"
+                            class="tweet-item">Status 1995122307258335521</a>
                     </div>
                 </div>
 
@@ -777,7 +938,8 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1995212989461622900" target="_blank" class="tweet-item">Status 1995212989461622900</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1995212989461622900" target="_blank"
+                            class="tweet-item">Status 1995212989461622900</a>
                     </div>
                 </div>
 
@@ -801,26 +963,46 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1984258605953290358" target="_blank" class="tweet-item">Status 1984258605953290358</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983896351814644063" target="_blank" class="tweet-item">Status 1983896351814644063</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983896349793013892" target="_blank" class="tweet-item">Status 1983896349793013892</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983896348094235022" target="_blank" class="tweet-item">Status 1983896348094235022</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983896345506181597" target="_blank" class="tweet-item">Status 1983896345506181597</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983893561700676092" target="_blank" class="tweet-item">Status 1983893561700676092</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983885301341941912" target="_blank" class="tweet-item">Status 1983885301341941912</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983885299366482185" target="_blank" class="tweet-item">Status 1983885299366482185</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983885297051181306" target="_blank" class="tweet-item">Status 1983885297051181306</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983883942190362797" target="_blank" class="tweet-item">Status 1983883942190362797</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983883940055392745" target="_blank" class="tweet-item">Status 1983883940055392745</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983882441480925274" target="_blank" class="tweet-item">Status 1983882441480925274</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983882439832551481" target="_blank" class="tweet-item">Status 1983882439832551481</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983882437932503405" target="_blank" class="tweet-item">Status 1983882437932503405</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983837792825438704" target="_blank" class="tweet-item">Status 1983837792825438704</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983821131267371459" target="_blank" class="tweet-item">Status 1983821131267371459</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983821129669341495" target="_blank" class="tweet-item">Status 1983821129669341495</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983821127324705111" target="_blank" class="tweet-item">Status 1983821127324705111</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983797955791614199" target="_blank" class="tweet-item">Status 1983797955791614199</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983717558600798716" target="_blank" class="tweet-item">Status 1983717558600798716</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1984258605953290358" target="_blank"
+                            class="tweet-item">Status 1984258605953290358</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983896351814644063" target="_blank"
+                            class="tweet-item">Status 1983896351814644063</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983896349793013892" target="_blank"
+                            class="tweet-item">Status 1983896349793013892</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983896348094235022" target="_blank"
+                            class="tweet-item">Status 1983896348094235022</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983896345506181597" target="_blank"
+                            class="tweet-item">Status 1983896345506181597</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983893561700676092" target="_blank"
+                            class="tweet-item">Status 1983893561700676092</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983885301341941912" target="_blank"
+                            class="tweet-item">Status 1983885301341941912</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983885299366482185" target="_blank"
+                            class="tweet-item">Status 1983885299366482185</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983885297051181306" target="_blank"
+                            class="tweet-item">Status 1983885297051181306</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983883942190362797" target="_blank"
+                            class="tweet-item">Status 1983883942190362797</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983883940055392745" target="_blank"
+                            class="tweet-item">Status 1983883940055392745</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983882441480925274" target="_blank"
+                            class="tweet-item">Status 1983882441480925274</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983882439832551481" target="_blank"
+                            class="tweet-item">Status 1983882439832551481</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983882437932503405" target="_blank"
+                            class="tweet-item">Status 1983882437932503405</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983837792825438704" target="_blank"
+                            class="tweet-item">Status 1983837792825438704</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983821131267371459" target="_blank"
+                            class="tweet-item">Status 1983821131267371459</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983821129669341495" target="_blank"
+                            class="tweet-item">Status 1983821129669341495</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983821127324705111" target="_blank"
+                            class="tweet-item">Status 1983821127324705111</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983797955791614199" target="_blank"
+                            class="tweet-item">Status 1983797955791614199</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983717558600798716" target="_blank"
+                            class="tweet-item">Status 1983717558600798716</a>
                     </div>
                 </div>
 
@@ -829,23 +1011,34 @@
                     <h3>Agent Lightning フレームワークテスト</h3>
                     <p>MicrosoftのAgent LightningをGoogle Colabで実行。RL/プロンプト最適化、AgentOpsでトレース可視化。</p>
                     <div class="links">
-                        <a href="https://hamaruki.com/run-agent-lightning-examples-apo-on-colab-20251029/" target="_blank" class="link-btn">📄 記事を読む</a>
+                        <a href="https://hamaruki.com/run-agent-lightning-examples-apo-on-colab-20251029/"
+                            target="_blank" class="link-btn">📄 記事を読む</a>
                     </div>
                     <button class="tweet-accordion" onclick="toggleTweets(this)">
                         <span>SHOW TWEETS (10)</span>
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1983586565826998624" target="_blank" class="tweet-item">Status 1983586565826998624</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983586563603972400" target="_blank" class="tweet-item">Status 1983586563603972400</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983577952731460049" target="_blank" class="tweet-item">Status 1983577952731460049</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983573657843855519" target="_blank" class="tweet-item">Status 1983573657843855519</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983526999189836113" target="_blank" class="tweet-item">Status 1983526999189836113</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983526996744573098" target="_blank" class="tweet-item">Status 1983526996744573098</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983520643774836955" target="_blank" class="tweet-item">Status 1983520643774836955</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983512748492251342" target="_blank" class="tweet-item">Status 1983512748492251342</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983507316885393892" target="_blank" class="tweet-item">Status 1983507316885393892</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983507314645889437" target="_blank" class="tweet-item">Status 1983507314645889437</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983586565826998624" target="_blank"
+                            class="tweet-item">Status 1983586565826998624</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983586563603972400" target="_blank"
+                            class="tweet-item">Status 1983586563603972400</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983577952731460049" target="_blank"
+                            class="tweet-item">Status 1983577952731460049</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983573657843855519" target="_blank"
+                            class="tweet-item">Status 1983573657843855519</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983526999189836113" target="_blank"
+                            class="tweet-item">Status 1983526999189836113</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983526996744573098" target="_blank"
+                            class="tweet-item">Status 1983526996744573098</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983520643774836955" target="_blank"
+                            class="tweet-item">Status 1983520643774836955</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983512748492251342" target="_blank"
+                            class="tweet-item">Status 1983512748492251342</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983507316885393892" target="_blank"
+                            class="tweet-item">Status 1983507316885393892</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983507314645889437" target="_blank"
+                            class="tweet-item">Status 1983507314645889437</a>
                     </div>
                 </div>
 
@@ -858,8 +1051,10 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1983893567920861664" target="_blank" class="tweet-item">Status 1983893567920861664</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983893565425250358" target="_blank" class="tweet-item">Status 1983893565425250358</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983893567920861664" target="_blank"
+                            class="tweet-item">Status 1983893567920861664</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983893565425250358" target="_blank"
+                            class="tweet-item">Status 1983893565425250358</a>
                     </div>
                 </div>
 
@@ -872,10 +1067,14 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1983474479994216650" target="_blank" class="tweet-item">Status 1983474479994216650</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983473863758655568" target="_blank" class="tweet-item">Status 1983473863758655568</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983473626688127345" target="_blank" class="tweet-item">Status 1983473626688127345</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983473359695568943" target="_blank" class="tweet-item">Status 1983473359695568943</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983474479994216650" target="_blank"
+                            class="tweet-item">Status 1983474479994216650</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983473863758655568" target="_blank"
+                            class="tweet-item">Status 1983473863758655568</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983473626688127345" target="_blank"
+                            class="tweet-item">Status 1983473626688127345</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983473359695568943" target="_blank"
+                            class="tweet-item">Status 1983473359695568943</a>
                     </div>
                 </div>
 
@@ -888,10 +1087,14 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1983902765811417217" target="_blank" class="tweet-item">Status 1983902765811417217</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983730129563218072" target="_blank" class="tweet-item">Status 1983730129563218072</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983724447774470166" target="_blank" class="tweet-item">Status 1983724447774470166</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983505941459869891" target="_blank" class="tweet-item">Status 1983505941459869891</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983902765811417217" target="_blank"
+                            class="tweet-item">Status 1983902765811417217</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983730129563218072" target="_blank"
+                            class="tweet-item">Status 1983730129563218072</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983724447774470166" target="_blank"
+                            class="tweet-item">Status 1983724447774470166</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983505941459869891" target="_blank"
+                            class="tweet-item">Status 1983505941459869891</a>
                     </div>
                 </div>
 
@@ -904,8 +1107,10 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1983881095553937430" target="_blank" class="tweet-item">Status 1983881095553937430</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1983780787393851524" target="_blank" class="tweet-item">Status 1983780787393851524</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983881095553937430" target="_blank"
+                            class="tweet-item">Status 1983881095553937430</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1983780787393851524" target="_blank"
+                            class="tweet-item">Status 1983780787393851524</a>
                     </div>
                 </div>
             </div>
@@ -928,15 +1133,24 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1967241723333255473" target="_blank" class="tweet-item">Status 1967241723333255473</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967238396327432629" target="_blank" class="tweet-item">Status 1967238396327432629</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967237648042668105" target="_blank" class="tweet-item">Status 1967237648042668105</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967235555928035404" target="_blank" class="tweet-item">Status 1967235555928035404</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967232015885123809" target="_blank" class="tweet-item">Status 1967232015885123809</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967157089215926673" target="_blank" class="tweet-item">Status 1967157089215926673</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967147232110801100" target="_blank" class="tweet-item">Status 1967147232110801100</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967146413302931870" target="_blank" class="tweet-item">Status 1967146413302931870</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967134687895367960" target="_blank" class="tweet-item">Status 1967134687895367960</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967241723333255473" target="_blank"
+                            class="tweet-item">Status 1967241723333255473</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967238396327432629" target="_blank"
+                            class="tweet-item">Status 1967238396327432629</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967237648042668105" target="_blank"
+                            class="tweet-item">Status 1967237648042668105</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967235555928035404" target="_blank"
+                            class="tweet-item">Status 1967235555928035404</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967232015885123809" target="_blank"
+                            class="tweet-item">Status 1967232015885123809</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967157089215926673" target="_blank"
+                            class="tweet-item">Status 1967157089215926673</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967147232110801100" target="_blank"
+                            class="tweet-item">Status 1967147232110801100</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967146413302931870" target="_blank"
+                            class="tweet-item">Status 1967146413302931870</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967134687895367960" target="_blank"
+                            class="tweet-item">Status 1967134687895367960</a>
                     </div>
                 </div>
 
@@ -949,12 +1163,18 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1967203335767011455" target="_blank" class="tweet-item">Status 1967203335767011455</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967190391092125983" target="_blank" class="tweet-item">Status 1967190391092125983</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967116068985729430" target="_blank" class="tweet-item">Status 1967116068985729430</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967112472491630820" target="_blank" class="tweet-item">Status 1967112472491630820</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967112263938306413" target="_blank" class="tweet-item">Status 1967112263938306413</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967104695278899613" target="_blank" class="tweet-item">Status 1967104695278899613</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967203335767011455" target="_blank"
+                            class="tweet-item">Status 1967203335767011455</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967190391092125983" target="_blank"
+                            class="tweet-item">Status 1967190391092125983</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967116068985729430" target="_blank"
+                            class="tweet-item">Status 1967116068985729430</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967112472491630820" target="_blank"
+                            class="tweet-item">Status 1967112472491630820</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967112263938306413" target="_blank"
+                            class="tweet-item">Status 1967112263938306413</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967104695278899613" target="_blank"
+                            class="tweet-item">Status 1967104695278899613</a>
                     </div>
                 </div>
 
@@ -967,16 +1187,22 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1967576102702068205" target="_blank" class="tweet-item">Status 1967576102702068205</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967572896181821638" target="_blank" class="tweet-item">Status 1967572896181821638</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967273576098406582" target="_blank" class="tweet-item">Status 1967273576098406582</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967252015152771375" target="_blank" class="tweet-item">Status 1967252015152771375</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1966879206073397315" target="_blank" class="tweet-item">Status 1966879206073397315</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1966878662025945566" target="_blank" class="tweet-item">Status 1966878662025945566</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967576102702068205" target="_blank"
+                            class="tweet-item">Status 1967576102702068205</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967572896181821638" target="_blank"
+                            class="tweet-item">Status 1967572896181821638</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967273576098406582" target="_blank"
+                            class="tweet-item">Status 1967273576098406582</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967252015152771375" target="_blank"
+                            class="tweet-item">Status 1967252015152771375</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1966879206073397315" target="_blank"
+                            class="tweet-item">Status 1966879206073397315</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1966878662025945566" target="_blank"
+                            class="tweet-item">Status 1966878662025945566</a>
                     </div>
                 </div>
 
-                 <div class="card">
+                <div class="card">
                     <span class="card-icon">🖼️</span>
                     <h3>SRPO画像生成実験</h3>
                     <p>TencentのSRPOモデルで妖怪テーマの画像生成(蛇女、河童、天狗)。Google Colab A100 80GBで実行。</p>
@@ -985,9 +1211,12 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1967142190402203717" target="_blank" class="tweet-item">Status 1967142190402203717</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967141058363719746" target="_blank" class="tweet-item">Status 1967141058363719746</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967136810125193682" target="_blank" class="tweet-item">Status 1967136810125193682</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967142190402203717" target="_blank"
+                            class="tweet-item">Status 1967142190402203717</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967141058363719746" target="_blank"
+                            class="tweet-item">Status 1967141058363719746</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967136810125193682" target="_blank"
+                            class="tweet-item">Status 1967136810125193682</a>
                     </div>
                 </div>
 
@@ -1000,8 +1229,10 @@
                         <span>▼</span>
                     </button>
                     <div class="tweet-list">
-                        <a href="https://x.com/hAru_mAki_ch/status/1967174992464171238" target="_blank" class="tweet-item">Status 1967174992464171238</a>
-                        <a href="https://x.com/hAru_mAki_ch/status/1967183532532658445" target="_blank" class="tweet-item">Status 1967183532532658445</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967174992464171238" target="_blank"
+                            class="tweet-item">Status 1967174992464171238</a>
+                        <a href="https://x.com/hAru_mAki_ch/status/1967183532532658445" target="_blank"
+                            class="tweet-item">Status 1967183532532658445</a>
                     </div>
                 </div>
 
@@ -1018,7 +1249,7 @@
                 <a href="https://hamaruki.com/" target="_blank">Blog</a>
             </div>
             <div class="copyright">
-                &copy; 2025 Tokiwavalley Project Archives. All Rights Reserved.
+                &copy; 2025 Project Archives. All Rights Reserved.
             </div>
         </footer>
     </div>
@@ -1125,7 +1356,7 @@
 
                     if (dist < 150) {
                         ctx.beginPath();
-                        ctx.strokeStyle = `rgba(212, 175, 55, ${0.1 - dist/1500})`; // Gold connections
+                        ctx.strokeStyle = `rgba(212, 175, 55, ${0.1 - dist / 1500})`; // Gold connections
                         ctx.lineWidth = 0.5;
                         ctx.moveTo(p.x, p.y);
                         ctx.lineTo(p2.x, p2.y);
@@ -1146,4 +1377,5 @@
         animate();
     </script>
 </body>
+
 </html>
