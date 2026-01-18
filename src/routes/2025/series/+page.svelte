@@ -3,31 +3,7 @@
 
 	let { data } = $props();
 
-	// ページネーション設定
-	const INCREMENT = 20;
-	let visibleCount = $state(INCREMENT);
-
-	const allSeries = data.series;
-	const totalSeries = allSeries.length;
-	const visibleSeries = () => allSeries.slice(0, visibleCount);
-	const hasMore = () => visibleCount < totalSeries;
-	const showingCount = () => Math.min(visibleCount, totalSeries);
-
-	function loadMore() {
-		visibleCount += INCREMENT;
-		setTimeout(() => {
-			window.scrollBy({ top: 100, behavior: 'smooth' });
-		}, 100);
-	}
-
-	// スタイルに応じた色
-	const styleColors: Record<string, string> = {
-		circle: '#00f0ff',
-		solid_circle: '#d4af37',
-		keycap: '#ff6b6b',
-		standard: '#4ecdc4',
-		vol: '#a8e6cf'
-	};
+	const series: any[] = data.series;
 </script>
 
 <svelte:head>
@@ -46,53 +22,25 @@
 
 		<div class="hero-title-group">
 			<h1 class="main-title"><i class="fa-solid fa-layer-group"></i> Series Collection</h1>
-			<div class="subtitle">{showingCount()} / {totalSeries} curated series</div>
+			<div class="subtitle">{series.length} curated series</div>
 		</div>
 	</header>
 
 	<main>
-		<div class="mosaic-grid">
-			{#each visibleSeries() as s (s.slug)}
-				<a href="{base}/2025/series/{s.slug}" class="mosaic-tile" class:has-image={s.thumbnailUrl}>
-					{#if s.thumbnailUrl}
-						<div class="tile-image-wrapper">
-							<img
-								src={s.thumbnailUrl}
-								alt={s.title}
-								class="tile-image"
-								loading="lazy" />
-							{#if s.thumbnailType === 'video'}
-								<div class="video-indicator">
-									<i class="fa-solid fa-play"></i>
-								</div>
-							{/if}
+		<div class="series-list">
+			{#each series as s}
+				<a href="{base}/2025/series/{s.slug}" class="series-card">
+					<div class="series-info">
+						<div class="series-title">{s.title}</div>
+						<div class="series-meta">
+							<span class="series-style">{s.style}</span>
+							<span class="series-count">{s.tweetCount} tweets</span>
 						</div>
-					{/if}
-					<div class="tile-content">
-						<div class="tile-style" style="color: {styleColors[s.style] || '#888'}">
-							{s.style}
-						</div>
-						<div class="tile-title">{s.title}</div>
-						<div class="tile-count">{s.tweetCount} tweets</div>
 					</div>
-					<div class="tile-overlay">
-						<i class="fa-solid fa-arrow-right overlay-icon"></i>
-					</div>
+					<div class="series-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 				</a>
 			{/each}
 		</div>
-
-		{#if hasMore()}
-			<div class="load-more-container">
-				<button
-					class="load-more-btn"
-					onclick={loadMore}>
-					<i class="fa-solid fa-chevron-down"></i>
-					<span>Load More ({showingCount()} / {totalSeries})</span>
-					<i class="fa-solid fa-chevron-down"></i>
-				</button>
-			</div>
-		{/if}
 	</main>
 
 	<footer>
@@ -107,310 +55,115 @@
 <style>
 	.container {
 		min-height: 100vh;
-		padding: 40px 20px 80px;
-		max-width: 1400px;
+		padding: 40px 20px;
+		max-width: 1000px;
 		margin: 0 auto;
-		position: relative;
-		z-index: 1;
 	}
 
 	/* Breadcrumbs */
 	.breadcrumbs {
 		display: flex;
 		align-items: center;
-		gap: 8px;
+		gap: 10px;
 		flex-wrap: wrap;
-		margin-bottom: 40px;
-		font-size: 0.85rem;
-		font-family: 'Orbitron', sans-serif;
-		padding: 12px 20px;
-		background: rgba(0, 0, 0, 0.3);
-		border: 1px solid rgba(212, 175, 55, 0.15);
-		border-radius: 8px;
-		backdrop-filter: blur(10px);
+		margin-bottom: 30px;
+		font-size: 0.9rem;
 	}
 
 	.breadcrumbs a {
 		color: #00f0ff;
 		text-decoration: none;
-		transition: all 0.2s;
-		padding: 2px 6px;
-		border-radius: 4px;
 	}
 
 	.breadcrumbs a:hover {
-		background: rgba(0, 240, 255, 0.1);
-		text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+		text-decoration: underline;
 	}
 
 	.breadcrumbs .separator {
-		color: #666;
-		font-size: 0.65rem;
+		color: #888;
+		font-size: 0.7rem;
 	}
 
 	.breadcrumbs .current {
-		color: #d4af37;
-		font-weight: 500;
+		color: #e0e0e0;
 	}
 
 	/* Hero */
 	.hero-title-group {
 		text-align: center;
 		margin-bottom: 60px;
-		position: relative;
-	}
-
-	.hero-title-group::before {
-		content: '';
-		position: absolute;
-		top: -20px;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100px;
-		height: 3px;
-		background: linear-gradient(90deg, transparent, #d4af37, transparent);
 	}
 
 	.main-title {
 		font-family: 'Orbitron', sans-serif;
 		font-size: 3rem;
 		color: #e0e0e0;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
 
 	.subtitle {
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 		color: #888;
-		padding: 8px 20px;
-		background: rgba(0, 240, 255, 0.05);
-		border: 1px solid rgba(0, 240, 255, 0.15);
-		border-radius: 20px;
-		display: inline-block;
 	}
 
-	/* Mosaic Grid Layout */
-	.mosaic-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: 20px;
+	/* Series List */
+	.series-list {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
 	}
 
-	/* Mosaic Tile */
-	.mosaic-tile {
-		position: relative;
-		display: block;
+	.series-card {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: rgba(212, 175, 55, 0.05);
+		border: 1px solid rgba(212, 175, 55, 0.2);
+		border-radius: 8px;
+		padding: 15px 20px;
 		text-decoration: none;
 		color: inherit;
-		background: rgba(20, 20, 25, 0.6);
-		border: 1px solid rgba(212, 175, 55, 0.2);
-		border-radius: 16px;
-		overflow: hidden;
-		transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-		backdrop-filter: blur(10px);
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-		min-height: 200px;
+		transition: all 0.3s ease;
 	}
 
-	.mosaic-tile:hover {
-		transform: translateY(-8px) scale(1.02);
-		border-color: rgba(0, 240, 255, 0.5);
-		box-shadow: 0 20px 50px rgba(0, 240, 255, 0.3);
+	.series-card:hover {
+		background: rgba(212, 175, 55, 0.1);
+		transform: translateX(10px);
+		box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
 	}
 
-	.mosaic-tile:not(.has-image) {
-		background: linear-gradient(145deg, rgba(20, 20, 25, 0.9), rgba(10, 10, 15, 0.95));
-		border: 2px solid rgba(212, 175, 55, 0.3);
+	.series-info {
+		flex: 1;
 	}
 
-	/* Tile Image */
-	.tile-image-wrapper {
-		width: 100%;
-		height: 200px;
-		overflow: hidden;
-		position: relative;
-		background: #000;
-	}
-
-	.tile-image {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: transform 0.6s ease;
-		display: block;
-	}
-
-	.mosaic-tile:hover .tile-image {
-		transform: scale(1.1);
-	}
-
-	.video-indicator {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		width: 32px;
-		height: 32px;
-		background: rgba(0, 0, 0, 0.7);
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		backdrop-filter: blur(5px);
-	}
-
-	.video-indicator i {
-		color: #fff;
-		font-size: 0.9rem;
-	}
-
-	/* Tile Content */
-	.tile-content {
-		padding: 16px;
-		position: relative;
-		z-index: 1;
-		background: linear-gradient(to top, rgba(5, 5, 5, 0.95), rgba(5, 5, 5, 0.7));
-		backdrop-filter: blur(10px);
-		border-top: 1px solid rgba(212, 175, 55, 0.1);
-	}
-
-	.has-image .tile-content {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 16px;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.6));
-	}
-
-	.tile-style {
-		font-family: 'Orbitron', sans-serif;
-		font-size: 0.65rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
-		padding: 4px 10px;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 4px;
-		display: inline-block;
-		margin-bottom: 8px;
-	}
-
-	.tile-title {
-		font-family: 'Noto Serif JP', serif;
+	.series-title {
 		font-size: 1rem;
-		font-weight: 500;
 		color: #e0e0e0;
-		line-height: 1.4;
-		margin-bottom: 8px;
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
+		margin-bottom: 5px;
 	}
 
-	.tile-count {
-		font-family: 'Orbitron', sans-serif;
+	.series-meta {
+		display: flex;
+		gap: 15px;
 		font-size: 0.8rem;
 		color: #888;
 	}
 
-	/* Overlay Icon */
-	.tile-overlay {
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		width: 36px;
-		height: 36px;
-		background: rgba(0, 0, 0, 0.6);
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		opacity: 0;
-		transform: scale(0.8);
-		transition: all 0.3s ease;
-		backdrop-filter: blur(5px);
-		z-index: 2;
-	}
-
-	.mosaic-tile:hover .tile-overlay {
-		opacity: 1;
-		transform: scale(1);
-	}
-
-	.overlay-icon {
-		color: #00f0ff;
-		font-size: 1rem;
-	}
-
-	/* Load More Button */
-	.load-more-container {
-		display: flex;
-		justify-content: center;
-		margin: 60px 0 40px;
-	}
-
-	.load-more-btn {
-		display: flex;
-		align-items: center;
-		gap: 12px;
-		padding: 16px 32px;
-		background: linear-gradient(145deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
-		border: 2px solid rgba(212, 175, 55, 0.4);
-		border-radius: 30px;
-		color: #d4af37;
+	.series-style {
 		font-family: 'Orbitron', sans-serif;
-		font-size: 1rem;
-		font-weight: 600;
-			letter-spacing: 0.1rem;
-		cursor: pointer;
-		transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-		backdrop-filter: blur(10px);
-		box-shadow:
-			0 4px 20px rgba(212, 175, 55, 0.2),
-			inset 0 1px 0 rgba(255, 255, 255, 0.1);
-		position: relative;
-		overflow: hidden;
+		padding: 2px 8px;
+		background: rgba(212, 175, 55, 0.1);
+		border-radius: 4px;
+		text-transform: uppercase;
 	}
 
-	.load-more-btn::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-		transition: left 0.5s ease;
+	.series-count {
+		color: #d4af37;
 	}
 
-	.load-more-btn:hover {
-		background: linear-gradient(145deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
-		border-color: #d4af37;
-		box-shadow:
-			0 8px 30px rgba(212, 175, 55, 0.4),
-			0 0 30px rgba(212, 175, 55, 0.2),
-			inset 0 1px 0 rgba(255, 255, 255, 0.2);
-		transform: translateY(-2px);
-	}
-
-	.load-more-btn:hover::before {
-		left: 100%;
-	}
-
-	.load-more-btn:active {
-		transform: translateY(0);
-	}
-
-	.load-more-btn i {
-		font-size: 0.9rem;
-		transition: transform 0.3s ease;
-	}
-
-	.load-more-btn:hover i:first-child {
-		transform: translateY(-2px);
-	}
-
-	.load-more-btn:hover i:last-child {
-		transform: translateY(2px);
+	.series-arrow {
+		font-size: 1.2rem;
+		color: #d4af37;
 	}
 
 	/* Footer */
@@ -440,15 +193,6 @@
 	@media (max-width: 768px) {
 		.main-title {
 			font-size: 2rem;
-		}
-
-		.mosaic-grid {
-			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-			gap: 15px;
-		}
-
-		.tile-image-wrapper {
-			height: 150px;
 		}
 	}
 </style>
