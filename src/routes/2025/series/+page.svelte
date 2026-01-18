@@ -14,14 +14,14 @@
 	<header>
 		<nav class="breadcrumbs">
 			<a href="{base}/">Home</a>
-			<span>></span>
+			<i class="fa-solid fa-chevron-right separator"></i>
 			<a href="{base}/2025">2025</a>
-			<span>></span>
+			<i class="fa-solid fa-chevron-right separator"></i>
 			<span class="current">Series</span>
 		</nav>
 
 		<div class="hero-title-group">
-			<h1 class="main-title">📚 Series Collection</h1>
+			<h1 class="main-title"><i class="fa-solid fa-layer-group"></i> Series Collection</h1>
 			<div class="subtitle">{series.length} curated series</div>
 		</div>
 	</header>
@@ -37,7 +37,7 @@
 							<span class="series-count">{s.tweetCount} tweets</span>
 						</div>
 					</div>
-					<div class="series-arrow">→</div>
+					<div class="series-arrow"><i class="fa-solid fa-chevron-right"></i></div>
 				</a>
 			{/each}
 		</div>
@@ -80,6 +80,11 @@
 
 	.breadcrumbs span {
 		color: #888;
+	}
+
+	.breadcrumbs .separator {
+		color: #888;
+		font-size: 0.7rem;
 	}
 
 	.breadcrumbs .current {
@@ -158,7 +163,7 @@
 	}
 
 	.series-arrow {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		color: #d4af37;
 	}
 
