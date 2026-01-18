@@ -79,16 +79,28 @@ GitHub Actionsが自動的にデプロイします。
 
 ## 🚀 ローカル開発
 
-このプロジェクトは静的HTMLなので、ブラウザでindex.htmlを直接開くだけで動作します。
-
-または、簡易的なローカルサーバーを起動：
+### 依存関係のインストール
 
 ```bash
-# Pythonを使う場合
-python -m http.server 8000
+pnpm install
+```
 
-# Node.jsを使う場合
-npx serve
+### 開発サーバーの起動
+
+```bash
+pnpm dev
+```
+
+### ビルド
+
+```bash
+pnpm build
+```
+
+### プレビュー
+
+```bash
+pnpm preview
 ```
 
 ## 📝 ライセンス
