@@ -53,9 +53,9 @@
 <Header type="year" year={2025} />
 
 <nav>
-	<a href="{base}/">← トップに戻る</a>
-	<a href="#logs">📅 Monthly Logs</a>
-	<a href="#series">📚 Series</a>
+	<a href="{base}/"><i class="fa-solid fa-arrow-left"></i> トップに戻る</a>
+	<a href="#logs"><i class="fa-regular fa-calendar-days"></i> Monthly Logs</a>
+	<a href="#series"><i class="fa-solid fa-layer-group"></i> Series</a>
 </nav>
 
 <section id="stats" class:visible={visibleSections.has('stats')}>
@@ -77,7 +77,7 @@
 
 <section id="logs" class:visible={visibleSections.has('logs')}>
 	<div class="section-header">
-		<div class="section-title">📅 Monthly Logs</div>
+		<div class="section-title"><i class="fa-regular fa-calendar-days"></i> Monthly Logs</div>
 		<div class="section-desc">Full chronological archive by month</div>
 	</div>
 	<div class="grid">
@@ -97,7 +97,7 @@
 
 <section id="series" class:visible={visibleSections.has('series')}>
 	<div class="section-header">
-		<div class="section-title">📚 Series Collection</div>
+		<div class="section-title"><i class="fa-solid fa-layer-group"></i> Series Collection</div>
 		<div class="section-desc">Curated threads and topic series</div>
 	</div>
 	<div class="series-list">
