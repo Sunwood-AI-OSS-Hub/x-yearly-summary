@@ -14,14 +14,14 @@
 	<header>
 		<nav class="breadcrumbs">
 			<a href="{base}/">Home</a>
-			<span>></span>
+			<i class="fa-solid fa-chevron-right separator"></i>
 			<a href="{base}/2025">2025</a>
-			<span>></span>
+			<i class="fa-solid fa-chevron-right separator"></i>
 			<span class="current">Monthly Logs</span>
 		</nav>
 
 		<div class="hero-title-group">
-			<h1 class="main-title">📅 Monthly Logs</h1>
+			<h1 class="main-title"><i class="fa-regular fa-calendar-days"></i> Monthly Logs</h1>
 			<div class="subtitle">Full chronological archive by month</div>
 		</div>
 	</header>
@@ -79,6 +79,11 @@
 
 	.breadcrumbs span {
 		color: #888;
+	}
+
+	.breadcrumbs .separator {
+		color: #888;
+		font-size: 0.7rem;
 	}
 
 	.breadcrumbs .current {
