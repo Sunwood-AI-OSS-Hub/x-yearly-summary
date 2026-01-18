@@ -12,8 +12,19 @@ const config = {
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
-			strict: true
-		})
+			strict: false,
+			trailingSlash: 'always'
+		}),
+		prerender: {
+			handleHttpError: ({ status, message }) => {
+				// 404エラーを無視
+				if (status === 404) {
+					return;
+				}
+				// その他のエラーはコンソールに出力
+				console.warn(`Prerender error: ${status} - ${message}`);
+			}
+		}
 	}
 };
 

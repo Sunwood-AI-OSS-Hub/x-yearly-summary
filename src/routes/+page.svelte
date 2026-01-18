@@ -30,6 +30,26 @@
 	年別に整理された創作活動の軌跡をご覧ください。
 </p>
 
+<!-- Tokiwa Valley Showcase -->
+<section class="showcase-section" class:visible={visible}>
+	<h2 class="section-title">Featured Showcase</h2>
+	<div class="showcase-grid">
+		<a class="showcase-card" href="{base}/tokiwavalley/">
+			<div class="showcase-icon">🏔️</div>
+			<h3>Tokiwa Valley</h3>
+			<p>
+				ニコニコ弾幕マルチエージェントプロンプトとAI人狼村の<br />
+				プロジェクトショーケース
+			</p>
+			<div class="showcase-tags">
+				<span class="tag">AI Agents</span>
+				<span class="tag">Multi-Agent</span>
+				<span class="tag">Werewolf</span>
+			</div>
+		</a>
+	</div>
+</section>
+
 <section class="years-section">
 	<h2 class="section-title">年別アーカイブ</h2>
 	<div class="year-grid" class:visible={visible}>
@@ -64,6 +84,109 @@
 		max-width: 800px;
 		margin: 0 auto 60px;
 		line-height: 1.8;
+	}
+
+	/* Showcase Section */
+	.showcase-section {
+		margin-bottom: 100px;
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.8s ease, transform 0.8s ease;
+	}
+
+	.showcase-section.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.showcase-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 40px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.showcase-card {
+		background: linear-gradient(145deg, rgba(20, 20, 25, 0.8), rgba(10, 10, 15, 0.9));
+		border: 2px solid rgba(0, 240, 255, 0.3);
+		border-radius: 20px;
+		padding: 40px;
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+		position: relative;
+		overflow: hidden;
+		backdrop-filter: blur(10px);
+	}
+
+	.showcase-card::before {
+		content: '';
+		position: absolute;
+		top: -50%;
+		left: -50%;
+		width: 200%;
+		height: 200%;
+		background: radial-gradient(circle, rgba(0, 240, 255, 0.1), transparent 70%);
+		opacity: 0;
+		transition: opacity 0.6s ease;
+	}
+
+	.showcase-card:hover {
+		transform: translateY(-10px) scale(1.02);
+		border-color: #00f0ff;
+		box-shadow:
+			0 20px 60px rgba(0, 0, 0, 0.8),
+			0 0 40px rgba(0, 240, 255, 0.3),
+			inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	}
+
+	.showcase-card:hover::before {
+		opacity: 1;
+	}
+
+	.showcase-icon {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+		filter: drop-shadow(0 0 20px rgba(0, 240, 255, 0.5));
+	}
+
+	.showcase-card h3 {
+		font-size: 2rem;
+		color: #00f0ff;
+		margin-bottom: 15px;
+		font-family: 'Noto Serif JP', serif;
+		text-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+	}
+
+	.showcase-card p {
+		font-size: 0.95rem;
+		color: #aaa;
+		margin-bottom: 20px;
+		line-height: 1.6;
+	}
+
+	.showcase-tags {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: auto;
+	}
+
+	.showcase-tags .tag {
+		font-family: 'Orbitron', sans-serif;
+		font-size: 0.7rem;
+		padding: 6px 12px;
+		background: rgba(0, 240, 255, 0.1);
+		border: 1px solid rgba(0, 240, 255, 0.3);
+		border-radius: 15px;
+		color: #00f0ff;
+		letter-spacing: 0.05rem;
 	}
 
 	.years-section {
