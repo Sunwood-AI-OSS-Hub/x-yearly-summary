@@ -5,6 +5,8 @@
 
 	let mounted = $state(false);
 
+	let { children } = $props();
+
 	onMount(() => {
 		mounted = true;
 	});
@@ -36,7 +38,7 @@
 {/if}
 
 <div class="container">
-	<slot />
+	{@render children()}
 </div>
 
 <Footer />
