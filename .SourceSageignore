@@ -102,3 +102,5 @@ LICENSE
 .agent/
 .svelte-kit/
 twitter-archive/
+
+.claude/
