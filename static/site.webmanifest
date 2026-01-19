@@ -1,0 +1,63 @@
+{
+  "name": "Project Archives | Sunwood AI Labs",
+  "short_name": "Project Archives",
+  "description": "和風とサイバーパンクが融合した、プロジェクトアーカイブコレクション",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "developer", "education"],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "2025 Archives",
+      "short_name": "2025",
+      "description": "2025年のプロジェクトアーカイブ",
+      "url": "/2025",
+      "icons": [{ "src": "/calendar-2025.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "2024 Archives",
+      "short_name": "2024",
+      "description": "2024年のプロジェクトアーカイブ",
+      "url": "/2024",
+      "icons": [{ "src": "/calendar-2024.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Tokiwa Valley",
+      "short_name": "Tokiwa Valley",
+      "description": "AIエージェントプロジェクトショーケース",
+      "url": "/tokiwavalley",
+      "icons": [{ "src": "/tokiwa-valley.png", "sizes": "96x96" }]
+    }
+  ]
+}
