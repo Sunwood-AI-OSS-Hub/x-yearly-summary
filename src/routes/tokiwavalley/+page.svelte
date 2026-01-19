@@ -2,6 +2,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
+	import { tokiwaProjects, type TokiwaProject } from '$lib/data/tokiwaProjects';
 
 	let visible = $state(false);
 
@@ -11,48 +12,7 @@
 		}, 100);
 	});
 
-	const projects = [
-		{
-			icon: 'fa-bullseye',
-			title: 'ニコニコ弾幕マルチエージェントプロンプト',
-			description: 'ニコニコ風の弾幕コメントをAIエージェントが自動生成するプロンプトシステム',
-			style: 'Multi-Agent',
-			tweetCount: 3,
-			slug: 'niconico-barrage',
-			color: '#00f0ff',
-			thumbnail: 'https://pbs.twimg.com/media/G4LdqjEXkAIkcHo.jpg'
-		},
-		{
-			icon: 'fa-comments',
-			title: 'エージェントたちの優雅な議論',
-			description: 'AIエージェント同士の議論をニコニコの投コメ機能で再現',
-			style: 'Discussion',
-			tweetCount: 4,
-			slug: 'agent-discussion',
-			color: '#d4af37',
-			thumbnail: 'https://pbs.twimg.com/amplify_video_thumb/1981994683254317056/img/icWr7TMPvfM6GUu6.jpg'
-		},
-		{
-			icon: 'fa-dog',
-			title: 'AI人狼村',
-			description: 'Gemini 2.5 Flash / Gemini 3 Pro搭載の自律型AI人狼シミュレーター',
-			style: 'Game',
-			tweetCount: 5,
-			slug: 'ai-werewolf-village',
-			color: '#ff6b6b',
-			thumbnail: null
-		},
-		{
-			icon: 'fa-file-alt',
-			title: '疑似マルチエージェント人狼',
-			description: 'Claude 4を使って、なんJ風掲示板で人狼ゲームをシミュレート',
-			style: 'Simulation',
-			tweetCount: 3,
-			slug: 'pseudo-multi-agent',
-			color: '#4ecdc4',
-			thumbnail: null
-		}
-	];
+	const projects: TokiwaProject[] = tokiwaProjects;
 </script>
 
 <svelte:head>
