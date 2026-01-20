@@ -3,6 +3,10 @@ import adapter from '@sveltejs/adapter-static';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
+		// デバッグモードで詳細ログを出力
+		// log: {
+		// 	handlers: true
+	// },
 		// GitHub Pagesのサブディレクトリ対応
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/x-yearly-summary' : ''
@@ -12,16 +16,12 @@ const config = {
 			assets: 'build',
 			fallback: undefined,
 			precompress: false,
-			strict: false,
-			trailingSlash: 'always'
+			strict: true,
+			trailingSlash: 'ignore'
 		}),
 		prerender: {
 			handleHttpError: ({ status, message }) => {
-				// 404エラーを無視
-				if (status === 404) {
-					return;
-				}
-				// その他のエラーはコンソールに出力
+				// エラーをコンソールに出力（404も含む）
 				console.warn(`Prerender error: ${status} - ${message}`);
 			}
 		}
