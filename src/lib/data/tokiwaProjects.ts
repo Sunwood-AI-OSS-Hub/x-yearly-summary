@@ -111,6 +111,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 				icon: 'fa-eye',
 				title: '神の視点モード',
 				description: '観戦者として AI 同士の対戦を観察可能なストレスフリーな視聴体験'
+			},
+			{
+				icon: 'fa-comments',
+				title: '亜種: 疑似マルチエージェント人狼',
+				description: 'なんJ風掲示板シミュレーター - Claude 4で呪術廻戦キャラクターなどを使った人狼ゲーム実況スレを生成'
 			}
 		],
 		techStack: [
@@ -184,6 +189,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 				icon: 'fa-kaggle'
 			},
 			{
+				url: 'https://github.com/Sunwood-ai-labs/MysticLibrary/tree/main/prompts/pseudo-multi-agent',
+				label: 'プロンプト (亜種)',
+				icon: 'fa-file-code'
+			},
+			{
 				url: 'https://x.com/hAru_mAki_ch/status/1999690891880202687',
 				label: 'X (Twitter)',
 				icon: 'fa-x-twitter'
@@ -192,7 +202,10 @@ export const tokiwaProjects: TokiwaProject[] = [
 		relatedTweets: [
 			'https://x.com/hAru_mAki_ch/status/1999690891880202687',
 			'https://x.com/hAru_mAki_ch/status/1997225578156667094',
-			'https://x.com/hAru_mAki_ch/status/1997647324605186355'
+			'https://x.com/hAru_mAki_ch/status/1997647324605186355',
+			'https://x.com/hAru_mAki_ch/status/1898523134162378169',
+			'https://x.com/hAru_mAki_ch/status/1898457864996941964',
+			'https://x.com/hAru_mAki_ch/status/1898449283777241224'
 		]
 	},
 	{
@@ -201,11 +214,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 		title: 'ニコニコ弾幕マルチエージェントプロンプト',
 		subtitle: 'AIエージェントによる弾幕コメント生成システム',
 		description: 'ニコニコ風の弾幕コメントをAIエージェントが自動生成するプロンプトシステム',
-		longDescription: '複数のAIエージェント（各個別のペルソナ）がニコニコ風の弾幕コメントを出し合うマルチエージェントシステム。約500エージェントまで対応し、短時間で大量の弾幕を生成可能です。',
+		longDescription: '複数のAIエージェント（各個別のペルソナ）がニコニコ風の弾幕コメントを出し合うマルチエージェントシステム。約500エージェントまで対応し、短時間で大量の弾幕を生成可能です。「エージェントたちの優雅な議論」はこのプロジェクトの一部です。',
 		style: 'Multi-Agent',
 		color: '#00f0ff',
 		thumbnail: 'https://pbs.twimg.com/media/G4LdqjEXkAIkcHo.jpg',
-		tweetCount: 3,
+		tweetCount: 7,
 		version: 'V3.0',
 		features: [
 			{
@@ -245,6 +258,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 				url: 'https://pbs.twimg.com/media/G4LdqjEXkAIkcHo.jpg',
 				type: 'photo',
 				description: 'ニコニコ弾幕マルチエージェントプロンプト'
+			},
+			{
+				url: 'https://pbs.twimg.com/amplify_video_thumb/1981994683254317056/img/icWr7TMPvfM6GUu6.jpg',
+				type: 'video',
+				description: 'エージェントたちの議論デモ - ChatGPT Atlas や Workflow DevKit などの最新トピックを議論'
 			}
 		],
 		links: [
@@ -261,120 +279,10 @@ export const tokiwaProjects: TokiwaProject[] = [
 		],
 		relatedTweets: [
 			'https://x.com/hAru_mAki_ch/status/1982393197059063891',
-			'https://x.com/hAru_mAki_ch/status/1995538630304264448'
-		]
-	},
-	{
-		slug: 'agent-discussion',
-		icon: 'fa-comments',
-		title: 'エージェントたちの優雅な議論',
-		subtitle: 'AIエージェントによる議論の再現',
-		description: 'AIエージェント同士の議論をニコニコの投コメ機能で再現',
-		longDescription: 'OpenAIの「ChatGPT Atlas」やVercel製「Workflow DevKit」などの最新トピックについて、複数のAIエージェントが議論を展開し、弾幕コメントとして可視化します。',
-		style: 'Discussion',
-		color: '#d4af37',
-		thumbnail: 'https://pbs.twimg.com/amplify_video_thumb/1981994683254317056/img/icWr7TMPvfM6GUu6.jpg',
-		tweetCount: 4,
-		features: [
-			{
-				icon: 'fa-brain',
-				title: '複数AIエージェント',
-				description: 'それぞれ異なる視点を持つAIエージェントが議論'
-			},
-			{
-				icon: 'fa-broadcast-tower',
-				title: 'X (Twitter) Broadcast',
-				description: '議論の様子をリアルタイムで配信'
-			},
-			{
-				icon: 'fa-comments',
-				title: '投コメ機能',
-				description: 'ニコニコの投コメ（投書コメント）機能で再現'
-			},
-			{
-				icon: 'fa-newspaper',
-				title: '最新トピック',
-				description: 'ChatGPT Atlas、Workflow DevKit などの最新技術トピックを議論'
-			}
-		],
-		techStack: [
-			{ name: 'X (Twitter) Broadcast', description: '配信プラットフォーム' },
-			{ name: 'ニコニコ投コメ', description: 'コメントシステム' },
-			{ name: 'マルチエージェント', description: 'AIアーキテクチャ' }
-		],
-		images: [
-			{
-				url: 'https://pbs.twimg.com/amplify_video_thumb/1981994683254317056/img/icWr7TMPvfM6GUu6.jpg',
-				type: 'video',
-				description: 'エージェントたちの議論デモ'
-			}
-		],
-		links: [
-			{
-				url: 'https://x.com/hAru_mAki_ch/status/1981994777739673651',
-				label: 'X (Twitter)',
-				icon: 'fa-x-twitter'
-			}
-		],
-		relatedTweets: [
+			'https://x.com/hAru_mAki_ch/status/1995538630304264448',
 			'https://x.com/hAru_mAki_ch/status/1981994777739673651',
 			'https://x.com/hAru_mAki_ch/status/1981741914824348003',
 			'https://x.com/hAru_mAki_ch/status/1981681906929537083'
-		]
-	},
-	{
-		slug: 'pseudo-multi-agent',
-		icon: 'fa-file-alt',
-		title: '疑似マルチエージェント人狼',
-		subtitle: 'なんJ風掲示板シミュレーター',
-		description: 'Claude 4を使って、なんJ風掲示板で人狼ゲームをシミュレート',
-		longDescription: 'Claude 4を使って、呪術廻戦キャラクターなどを使った人狼ゲーム実況スレを生成。AI同士の会話で進行する自律型ゲームシミュレーターです。',
-		style: 'Simulation',
-		color: '#4ecdc4',
-		tweetCount: 3,
-		features: [
-			{
-				icon: 'fa-comments',
-				title: 'なんJ風実況スレ',
-				description: '2ちゃんねる・5ちゃんねる風の掲示板フォーマット'
-			},
-			{
-				icon: 'fa-user-friends',
-				title: 'キャラクター設定',
-				description: '呪術廻戦などのキャラクターを使った人狼ゲーム'
-			},
-			{
-				icon: 'fa-magic',
-				title: 'Claude 4 搭載',
-				description: '最新の Claude 4 モデルを使用'
-			},
-			{
-				icon: 'fa-sync',
-				title: '自律進行',
-				description: 'AI同士の会話でゲームが自動進行'
-			}
-		],
-		techStack: [
-			{ name: 'Claude 4', description: 'AI モデル' },
-			{ name: 'プロンプトエンジニアリング', description: '疑似マルチエージェント' }
-		],
-		images: [],
-		links: [
-			{
-				url: 'https://github.com/Sunwood-ai-labs/MysticLibrary/blob/main/prompts/pseudo-multi-agent/pseudo_multi_agent_anime_werewolf_nanj_simulator.md',
-				label: 'プロンプト',
-				icon: 'fa-file-code'
-			},
-			{
-				url: 'https://x.com/hAru_mAki_ch/status/1898523134162378169',
-				label: 'X (Twitter)',
-				icon: 'fa-x-twitter'
-			}
-		],
-		relatedTweets: [
-			'https://x.com/hAru_mAki_ch/status/1898523134162378169',
-			'https://x.com/hAru_mAki_ch/status/1898457864996941964',
-			'https://x.com/hAru_mAki_ch/status/1898449283777241224'
 		]
 	},
 	{
