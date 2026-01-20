@@ -34,7 +34,7 @@
 <section class="showcase-section" class:visible={visible}>
 	<h2 class="section-title">Featured Showcase</h2>
 	<div class="showcase-grid">
-		<a class="showcase-card" href="{base}/tokiwavalley/">
+		<a class="showcase-card" href="{base}/tokiwavalley">
 			<div class="showcase-icon"><i class="fa-solid fa-mountain"></i></div>
 			<h3>Tokiwa Valley</h3>
 			<p>

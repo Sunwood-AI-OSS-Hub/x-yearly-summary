@@ -10,7 +10,7 @@
     <nav class="breadcrumbs">
         <a href="{base}/">Home</a>
         <i class="fa-solid fa-chevron-right separator"></i>
-        <a href="{base}/tokiwavalley/">Tokiwa Valley</a>
+        <a href="{base}/tokiwavalley">Tokiwa Valley</a>
         <i class="fa-solid fa-chevron-right separator"></i>
         <span class="current">About</span>
     </nav>

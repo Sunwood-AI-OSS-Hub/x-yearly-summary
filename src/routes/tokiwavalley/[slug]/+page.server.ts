@@ -4,6 +4,17 @@ import { getProjectBySlug, tokiwaProjects } from '$lib/data/tokiwaProjects';
 
 export const prerender = true;
 
+/**
+ * プリレンダリングするURLを指定
+ * 動的ルート [slug] を静的生成するために必要
+ */
+export async function entries() {
+	// 非同期でデータを取得
+	return tokiwaProjects.map((project) => ({
+		slug: project.slug
+	}));
+}
+
 export const load: PageServerLoad = ({ params }) => {
 	const slug = params.slug;
 	const project = getProjectBySlug(slug);

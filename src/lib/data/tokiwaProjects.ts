@@ -182,6 +182,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 				url: 'https://www.kaggle.com/code/aiakira/ai-werewolf-village-autonomous-multi-agent-game',
 				label: 'Kaggle',
 				icon: 'fa-kaggle'
+			},
+			{
+				url: 'https://x.com/hAru_mAki_ch/status/1999690891880202687',
+				label: 'X (Twitter)',
+				icon: 'fa-x-twitter'
 			}
 		],
 		relatedTweets: [
@@ -244,17 +249,20 @@ export const tokiwaProjects: TokiwaProject[] = [
 		],
 		links: [
 			{
-				url: 'https://github.com/Sunwood-ai-labs',
-				label: 'GitHub',
-				icon: 'fa-github'
-			},
-			{
 				url: 'https://aistudio.google.com/',
 				label: 'Gemini AI Studio',
 				icon: 'fa-google'
+			},
+			{
+				url: 'https://x.com/hAru_mAki_ch/status/1982393197059063891',
+				label: 'X (Twitter)',
+				icon: 'fa-x-twitter'
 			}
 		],
-		relatedTweets: []
+		relatedTweets: [
+			'https://x.com/hAru_mAki_ch/status/1982393197059063891',
+			'https://x.com/hAru_mAki_ch/status/1995538630304264448'
+		]
 	},
 	{
 		slug: 'agent-discussion',
@@ -303,9 +311,9 @@ export const tokiwaProjects: TokiwaProject[] = [
 		],
 		links: [
 			{
-				url: 'https://github.com/Sunwood-ai-labs',
-				label: 'GitHub',
-				icon: 'fa-github'
+				url: 'https://x.com/hAru_mAki_ch/status/1981994777739673651',
+				label: 'X (Twitter)',
+				icon: 'fa-x-twitter'
 			}
 		],
 		relatedTweets: [
@@ -358,9 +366,9 @@ export const tokiwaProjects: TokiwaProject[] = [
 				icon: 'fa-file-code'
 			},
 			{
-				url: 'https://github.com/Sunwood-ai-labs',
-				label: 'GitHub',
-				icon: 'fa-github'
+				url: 'https://x.com/hAru_mAki_ch/status/1898523134162378169',
+				label: 'X (Twitter)',
+				icon: 'fa-x-twitter'
 			}
 		],
 		relatedTweets: [
@@ -479,6 +487,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 				url: 'https://github.com/Sunwood-ai-labs/OASIS',
 				label: 'OASIS (Python版)',
 				icon: 'fa-python'
+			},
+			{
+				url: 'https://x.com/hAru_mAki_ch/status/1979602732748321267',
+				label: 'X (Twitter)',
+				icon: 'fa-x-twitter'
 			}
 		],
 		relatedTweets: [
@@ -557,6 +570,11 @@ export const tokiwaProjects: TokiwaProject[] = [
 				url: 'https://marketplace.visualstudio.com/items?itemName=Maki-SunwoodAILabs.vscode-mascot',
 				label: 'Visual Studio Marketplace',
 				icon: 'fa-microsoft'
+			},
+			{
+				url: 'https://x.com/hAru_mAki_ch/status/2008851767224844468',
+				label: 'X (Twitter)',
+				icon: 'fa-x-twitter'
 			}
 		],
 		relatedTweets: [
