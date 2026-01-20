@@ -47,7 +47,7 @@
 	<div class="insta-grid">
 		{#each projects as project}
 			<a
-				href="{base}/tokiwavalley/{project.slug}/"
+				href="{base}/tokiwavalley/{project.slug}"
 				class="insta-tile"
 				class:has-image={project.thumbnail}
 				style="--tile-color: {project.color}">

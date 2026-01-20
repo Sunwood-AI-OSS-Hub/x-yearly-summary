@@ -44,7 +44,7 @@
 <nav class="breadcrumbs">
 	<a href="{base}/">Home</a>
 	<i class="fa-solid fa-chevron-right separator"></i>
-	<a href="{base}/tokiwavalley/">Tokiwa Valley</a>
+	<a href="{base}/tokiwavalley">Tokiwa Valley</a>
 	<i class="fa-solid fa-chevron-right separator"></i>
 	<span class="current">{project.title}</span>
 </nav>
@@ -236,7 +236,7 @@
 
 		<div class="related-grid">
 			{#each relatedProjects as related}
-				<a href="{base}/tokiwavalley/{related.slug}/" class="related-card">
+				<a href="{base}/tokiwavalley/{related.slug}" class="related-card">
 					{#if related.thumbnail}
 						<img src={related.thumbnail} alt={related.title} class="related-image" />
 					{:else}
