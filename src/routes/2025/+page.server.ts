@@ -2,6 +2,8 @@ import type { PageServerLoad } from './$types';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
+export const prerender = true;
+
 export const load: PageServerLoad = () => {
 	// JSONファイルを読み込み
 	const jsonPath = join(process.cwd(), 'static/data/index.json');
