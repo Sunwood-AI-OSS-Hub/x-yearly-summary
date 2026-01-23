@@ -150,14 +150,19 @@
         .decorative-line::before { left: 0; }
         .decorative-line::after { right: 0; }
 
-        /* Project Grid - 2x2 layout for A4 */
+        /* Project Grid - 2 columns x 3 rows layout for A4 */
         .project-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
             gap: 5mm;
             flex: 1;
             margin-bottom: 5mm;
+        }
+
+        /* Clawd Agent3 spans 2 columns */
+        .project-card.clawd {
+            grid-column: span 2;
         }
 
         /* Project Card */
@@ -183,7 +188,7 @@
 
         .project-image {
             width: 100%;
-            height: 45mm;
+            height: 35mm;
             overflow: hidden;
             position: relative;
         }
@@ -406,12 +411,27 @@
         <header class="header">
             <p class="header-event">OSAKA AI CULTURE EXPO</p>
             <h1 class="header-title">大阪AI文化万博</h1>
-            <p class="header-subtitle">〜 Tokiwa Valley プロジェクト展示 〜</p>
+            <p class="header-subtitle">〜 Tokiwa Valley & Clawd Agent3 プロジェクト展示 〜</p>
             <div class="decorative-line"></div>
         </header>
 
         <!-- Project Grid -->
         <div class="project-grid">
+            <!-- Project 5: Clawd Agent3 (spans 2 columns) -->
+            <div class="project-card clawd">
+                <div class="project-image">
+                    <img src="https://raw.githubusercontent.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker/master/assets/header.png" alt="Clawd Agent3" onerror="this.style.background='linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%)'; this.style.display='none'; this.parentElement.innerHTML='<svg width=\\'100%\\' height=\\'100%\\' xmlns=\\'http://www.w3.org/2000/svg\\'><rect fill=\\'#1a1a1a\\' width=\\'100%\\' height=\\'100%\\'/><text x=\\'50%\\' y=\\'50%\\' text-anchor=\\'middle\\' dy=\\'.3em\\' fill=\\'#00f5ff\\' font-family=\\'Orbitron\\' font-size=\\'28\\'>Clawd Agent3</text></svg>'">
+                    <span class="project-category">AgentOS</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title-en">Clawd Agent3</h3>
+                    <h4 class="project-title-jp">クロウド・エージェント3</h4>
+                    <p class="project-description">
+                        自分専用AI「clawd bot」を3つのエージェントに分身させたDockerパッケージ。人格付与、記憶保存、Skills搭載でスマホから動画制作やGitHub操作を発注可能な「AgentOS Infinity」として進化中。GLM-4.7モデルを使用し、Remotionによる動画作成やghコマンドによるGitHub操作を実現。v0.1.0リリース済み。
+                    </p>
+                </div>
+            </div>
+
             <!-- Project 1: AI Werewolf Village -->
             <div class="project-card">
                 <div class="project-image">
@@ -477,7 +497,7 @@
         <footer class="footer">
             <div class="footer-left">
                 <p class="footer-logo">SUNWOOD AI LABS</p>
-                <p class="footer-text">Tokiwa Valley Collection</p>
+                <p class="footer-text">Tokiwa Valley & Clawd Collection</p>
             </div>
             <div class="footer-center">
                 <p class="footer-japanese">常盤の谷で出会う、奇跡のような創造</p>
