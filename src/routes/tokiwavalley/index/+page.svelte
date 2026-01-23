@@ -31,7 +31,7 @@
         <h1 class="page-title">Tokiwa Valley Showcase</h1>
         <p class="page-subtitle">
             和風とサイバーパンクが融合した、AIエージェントプロジェクトコレクション。<br />
-            ニコニコ弾幕マルチエージェントプロンプトとAI人狼村の創作活動をご覧ください。
+            ニコニコ弾幕マルチエージェントプロンプト、AI人狼村、そしてClawd Agent3 (AgentOS Infinity) の創作活動をご覧ください。
         </p>
     </div>
 </section>
