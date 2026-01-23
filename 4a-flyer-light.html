@@ -99,7 +99,7 @@
             z-index: 1;
             width: 100%;
             height: 100%;
-            padding: 12mm 10mm;
+            padding: 15mm 12mm;
             display: flex;
             flex-direction: column;
         }
@@ -107,45 +107,45 @@
         /* Header */
         .header {
             text-align: center;
-            margin-bottom: 5mm;
+            margin-bottom: 8mm;
             position: relative;
         }
 
         .header-event {
             font-family: 'Orbitron', sans-serif;
-            font-size: 11pt;
+            font-size: 14pt;
             font-weight: 700;
             color: var(--accent-pink);
             letter-spacing: 0.3em;
-            margin-bottom: 2mm;
+            margin-bottom: 3mm;
             text-transform: uppercase;
         }
 
         .header-title {
             font-family: 'Noto Serif JP', serif;
-            font-size: 28pt;
+            font-size: 36pt;
             font-weight: 900;
             background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-pink) 50%, var(--accent-purple) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
         }
 
         .header-subtitle {
             font-family: 'Noto Serif JP', serif;
-            font-size: 9pt;
+            font-size: 11pt;
             color: var(--accent-cyan);
-            margin-top: 1.5mm;
-            letter-spacing: 0.1em;
+            margin-top: 2mm;
+            letter-spacing: 0.15em;
         }
 
         /* Decorative Line */
         .decorative-line {
-            width: 120px;
+            width: 150px;
             height: 2px;
             background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-pink), transparent);
-            margin: 3mm auto 0;
+            margin: 4mm auto 0;
             position: relative;
         }
 
@@ -155,8 +155,8 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
             background: var(--accent-cyan);
             border-radius: 50%;
         }
@@ -167,11 +167,11 @@
         /* Project Grid - 2 columns x 3 rows layout for A4 */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(3, 1fr);
-            gap: 3mm;
+            gap: 5mm;
             flex: 1;
-            margin-bottom: 4mm;
+            margin-bottom: 5mm;
         }
 
         /* Clawd Agent3 spans 2 columns */
@@ -183,12 +183,12 @@
         .project-card {
             background: var(--bg-card);
             border: 2px solid var(--border-subtle);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             position: relative;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
 
         .project-card::before {
@@ -197,13 +197,13 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 2px;
+            height: 3px;
             background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink), var(--accent-purple));
         }
 
         .project-image {
             width: 100%;
-            height: 32mm;
+            height: 25mm;
             overflow: hidden;
             position: relative;
             background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
@@ -217,22 +217,22 @@
 
         .project-category {
             position: absolute;
-            top: 6px;
-            right: 6px;
-            padding: 3px 10px;
+            top: 8px;
+            right: 8px;
+            padding: 4px 12px;
             background: rgba(255, 255, 255, 0.95);
             border: 1px solid var(--accent-cyan);
-            border-radius: 12px;
+            border-radius: 15px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 6pt;
+            font-size: 7pt;
             color: var(--accent-cyan);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            letter-spacing: 0.1em;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .project-content {
-            padding: 3mm;
+            padding: 4mm;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -240,32 +240,32 @@
 
         .project-title-en {
             font-family: 'Orbitron', sans-serif;
-            font-size: 9pt;
+            font-size: 11pt;
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 0.5mm;
-            letter-spacing: 0.03em;
+            margin-bottom: 1mm;
+            letter-spacing: 0.05em;
         }
 
         .project-title-jp {
             font-family: 'Noto Serif JP', serif;
-            font-size: 7.5pt;
+            font-size: 9pt;
             color: var(--accent-purple);
-            margin-bottom: 1.5mm;
+            margin-bottom: 2mm;
             font-weight: 600;
         }
 
         .project-description {
             color: var(--text-secondary);
-            line-height: 1.4;
-            font-size: 6pt;
+            line-height: 1.6;
+            font-size: 7pt;
             flex: 1;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding-top: 2.5mm;
+            padding-top: 3mm;
             border-top: 2px solid var(--border-subtle);
             display: flex;
             justify-content: space-between;
@@ -278,17 +278,17 @@
 
         .footer-logo {
             font-family: 'Orbitron', sans-serif;
-            font-size: 9pt;
+            font-size: 11pt;
             font-weight: 700;
             color: var(--text-primary);
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
         }
 
         .footer-text {
             font-family: 'Zen Kaku Gothic New', sans-serif;
             color: var(--text-secondary);
-            font-size: 6pt;
-            margin-top: 0.5mm;
+            font-size: 7pt;
+            margin-top: 1mm;
         }
 
         .footer-center {
@@ -299,8 +299,8 @@
         .footer-japanese {
             font-family: 'Noto Serif JP', serif;
             color: var(--accent-cyan);
-            font-size: 7.5pt;
-            letter-spacing: 0.15em;
+            font-size: 9pt;
+            letter-spacing: 0.2em;
             font-weight: 600;
         }
 
@@ -319,58 +319,58 @@
             display: block;
             width: auto;
             height: auto;
-            max-width: 22mm;
-            max-height: 22mm;
+            max-width: 28mm;
+            max-height: 28mm;
         }
 
         .qr-container {
             display: flex;
-            gap: 2mm;
+            gap: 3mm;
             align-items: center;
         }
 
         .qr-url {
             font-family: 'Orbitron', sans-serif;
-            font-size: 5pt;
+            font-size: 6pt;
             color: var(--text-secondary);
-            margin-top: 0.5mm;
+            margin-top: 1mm;
         }
 
         /* Corner Decoration */
         .corner-decoration {
             position: absolute;
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             pointer-events: none;
             z-index: 2;
         }
 
         .corner-decoration.top-left {
-            top: 4mm;
-            left: 4mm;
-            border-top: 2px solid var(--accent-cyan);
-            border-left: 2px solid var(--accent-cyan);
+            top: 5mm;
+            left: 5mm;
+            border-top: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-cyan);
         }
 
         .corner-decoration.top-right {
-            top: 4mm;
-            right: 4mm;
-            border-top: 2px solid var(--accent-cyan);
-            border-right: 2px solid var(--accent-cyan);
+            top: 5mm;
+            right: 5mm;
+            border-top: 3px solid var(--accent-cyan);
+            border-right: 3px solid var(--accent-cyan);
         }
 
         .corner-decoration.bottom-left {
-            bottom: 4mm;
-            left: 4mm;
-            border-bottom: 2px solid var(--accent-cyan);
-            border-left: 2px solid var(--accent-cyan);
+            bottom: 5mm;
+            left: 5mm;
+            border-bottom: 3px solid var(--accent-cyan);
+            border-left: 3px solid var(--accent-cyan);
         }
 
         .corner-decoration.bottom-right {
-            bottom: 4mm;
-            right: 4mm;
-            border-bottom: 2px solid var(--accent-cyan);
-            border-right: 2px solid var(--accent-cyan);
+            bottom: 5mm;
+            right: 5mm;
+            border-bottom: 3px solid var(--accent-cyan);
+            border-right: 3px solid var(--accent-cyan);
         }
 
         /* Print Button */
@@ -416,13 +416,13 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 2px;
+            height: 3px;
             background: repeating-linear-gradient(
                 90deg,
                 var(--accent-cyan) 0px,
-                var(--accent-cyan) 8px,
-                transparent 8px,
-                transparent 16px
+                var(--accent-cyan) 10px,
+                transparent 10px,
+                transparent 20px
             );
             opacity: 0.3;
         }
@@ -454,11 +454,11 @@
             <div class="decorative-line"></div>
         </header>
 
-        <!-- Project Grid - 2x3 layout -->
+        <!-- Project Grid -->
         <div class="project-grid">
             <!-- Project 5: Clawd Agent3 (spans 2 columns) -->
             <div class="project-card clawd">
-                <div class="project-image" style="height: 38mm;">
+                <div class="project-image">
                     <img src="https://raw.githubusercontent.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker/master/assets/header.png" alt="Clawd Agent3" onerror="this.style.background='linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%)'; this.style.display='none'; this.parentElement.innerHTML='<svg width=\\'100%\\' height=\\'100%\\' xmlns=\\'http://www.w3.org/2000/svg\\'><rect fill=\\'#f0f0f0\\' width=\\'100%\\' height=\\'100%\\'/><text x=\\'50%\\' y=\\'50%\\' text-anchor=\\'middle\\' dy=\\'.3em\\' fill=\\'#00b8c4\\' font-family=\\'Orbitron\\' font-size=\\'28\\'>Clawd Agent3</text></svg>'">
                     <span class="project-category">AgentOS</span>
                 </div>
@@ -557,7 +557,7 @@
 
     <script>
         window.addEventListener('load', function() {
-            console.log('大阪AI文化万博 チラシ (Light Theme - 5 Projects)');
+            console.log('大阪AI文化万博 チラシ (Light Theme)');
             console.log('印刷方法: Ctrl+P または右上の「印刷する」ボタン');
         });
     </script>

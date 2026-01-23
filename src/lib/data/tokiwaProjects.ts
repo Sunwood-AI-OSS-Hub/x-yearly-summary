@@ -71,6 +71,97 @@ export interface TokiwaProject {
 
 export const tokiwaProjects: TokiwaProject[] = [
 	{
+		slug: 'clawd-agent3',
+		icon: 'fa-microchip',
+		title: 'Clawd Agent3',
+		subtitle: 'クロウド・エージェント3',
+		description: '自分専用AI「clawd bot」を3つのエージェントに分身させたDockerパッケージ',
+		longDescription: 'Clawd Agent3は、自分専用AI「clawd bot」を3つのエージェントに分身させたDocker一式のパッケージです。人格付与、記憶保存、Skills搭載でスマホから動画制作やGitHub操作を発注可能な「AgentOS Infinity」として進化中。GLM-4.7モデルを使用し、Remotionによる動画作成やghコマンドによるGitHub操作を実現します。',
+		style: 'AgentOS',
+		color: '#8338ec',
+		thumbnail: 'https://raw.githubusercontent.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker/master/assets/header.png',
+		tweetCount: 12,
+		github: 'https://github.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker',
+		version: 'v0.1.0',
+		license: 'MIT',
+		latestRelease: '2026年1月24日',
+		features: [
+			{
+				icon: 'fa-robot',
+				title: '3つの分身エージェント',
+				description: 'clawd botを3つの独立エージェントに分身させ、人格付与が可能'
+			},
+			{
+				icon: 'fa-brain',
+				title: '記憶保存機能',
+				description: 'memoryフォルダに各エージェントの記憶を保存・管理'
+			},
+			{
+				icon: 'fa-cogs',
+				title: 'Skills搭載',
+				description: 'Remotionによる動画作成、ghコマンドによるGitHub操作など拡張機能を実装'
+			},
+			{
+				icon: 'fa-mobile-screen',
+				title: 'スマホから発注',
+				description: 'Discordボット経由でスマホから動画制作やGitHub操作を発注可能'
+			},
+			{
+				icon: 'fa-server',
+				title: 'Docker Compose 一式',
+				description: 'ワンコマンド起動でローカル環境に安全に構築'
+			},
+			{
+				icon: 'fa-code',
+				title: 'GLM-4.7モデル',
+				description: 'ZAIプロバイダー経由で高性能なGLM-4.7モデルを共有'
+			}
+		],
+		techStack: [
+			{ name: 'Docker', description: 'コンテナ化' },
+			{ name: 'Discord.py', description: 'ボットフレームワーク' },
+			{ name: 'GLM-4.7', description: 'AIモデル' },
+			{ name: 'Remotion', description: '動画作成' },
+			{ name: 'GitHub CLI', description: 'GitHub操作' }
+		],
+		images: [
+			{
+				url: 'https://raw.githubusercontent.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker/master/assets/header.png',
+				type: 'photo',
+				description: 'Clawd Agent3 ヘッダー'
+			}
+		],
+		links: [
+			{
+				url: 'https://github.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker',
+				label: 'GitHub',
+				icon: 'fa-github'
+			},
+			{
+				url: 'https://x.com/hAru_mAki_ch/status/2014642842896105654',
+				label: '解説記事',
+				icon: 'fa-file-lines'
+			},
+			{
+				url: 'https://github.com/Sunwood-AI-OSS-Hub/clawd-multi-agent-discord-docker/releases/tag/v0.1.0',
+				label: 'v0.1.0リリース',
+				icon: 'fa-tag'
+			}
+		],
+		relatedTweets: [
+			'https://x.com/hAru_mAki_ch/status/2014649999645344065',
+			'https://x.com/hAru_mAki_ch/status/2014651674720424054',
+			'https://x.com/hAru_mAki_ch/status/2014652749250691354',
+			'https://x.com/hAru_mAki_ch/status/2014660938629259392',
+			'https://x.com/hAru_mAki_ch/status/2014667081917383051',
+			'https://x.com/hAru_mAki_ch/status/2014677295823540280',
+			'https://x.com/hAru_mAki_ch/status/2014677971945267618',
+			'https://x.com/hAru_mAki_ch/status/2014684282988724560',
+			'https://x.com/hAru_mAki_ch/status/2014685666450538729',
+			'https://x.com/hAru_mAki_ch/status/2014718499449667904'
+		]
+	},
+	{
 		slug: 'ai-werewolf-village',
 		icon: 'fa-dog',
 		title: 'AI 人狼村',
