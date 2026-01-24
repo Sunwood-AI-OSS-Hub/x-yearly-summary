@@ -37,6 +37,9 @@
 <svelte:head>
 	<title>{project.title} | Tokiwa Valley</title>
 	<meta name="description" content={project.description} />
+	{#if project.slug === 'niconico-barrage' || project.slug === 'clawd-agent3'}
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	{/if}
 </svelte:head>
 
 <Header type="main" />
@@ -222,6 +225,34 @@
 					<i class="fa-solid fa-arrow-right link-arrow"></i>
 				</a>
 			{/each}
+		</div>
+	</section>
+{/if}
+
+<!-- Twitter Embed (niconico-barrage only) -->
+{#if project.slug === 'niconico-barrage'}
+	<section class="twitter-embed" class:visible={visible}>
+		<div class="section-header">
+			<h2 class="section-title">Demo Video</h2>
+			<div class="section-desc">実際の弾幕が見れる動画</div>
+		</div>
+
+		<div class="twitter-embed-container">
+			{@html `<blockquote class="twitter-tweet" data-media-max-width="560" data-theme="dark"><p lang="ja" dir="ltr">DeepSeek-V3.2ファミリー爆誕🔥 徹底解説編❸<br>～ニコニコ弾幕マルチエージェント議論動画～<br><br>🎬 動画の概要<br>オープンソースAIの世界に現れた強力な挑戦者「DeepSeek-V3.2」を徹底解説します。… <a href="https://t.co/KqSGk3lkeX">https://t.co/KqSGk3lkeX</a> <a href="https://t.co/U5z98RH68c">pic.twitter.com/U5z98RH68c</a></p>&mdash; Maki@Sunwood AI Labs. (@hAru_mAki_ch) <a href="https://twitter.com/hAru_mAki_ch/status/1995538446241464536?ref_src=twsrc%5Etfw">December 1, 2025</a></blockquote>`}
+		</div>
+	</section>
+{/if}
+
+<!-- Twitter Embed (clawd-agent3 only) -->
+{#if project.slug === 'clawd-agent3'}
+	<section class="twitter-embed" class:visible={visible}>
+		<div class="section-header">
+			<h2 class="section-title">Demo Video</h2>
+			<div class="section-desc">Remotionで動画制作</div>
+		</div>
+
+		<div class="twitter-embed-container">
+			{@html `<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="ja" dir="ltr">自分専用AI「clawd bot」を3人に分身させたdocker一式のOSS「Clawd Agent3」改造中❽<br><br>Clawd AgentにRemotionのSkillsを搭載して動画を作成してもらえたぞ！！！🔥🔥🔥<br><br>つまりスマホからのエージェントに簡易的な動画制作を発注できるやん！！！ <a href="https://t.co/7Bj9KbfWmB">https://t.co/7Bj9KbfWmB</a> <a href="https://t.co/ofevauDx0X">pic.twitter.com/ofevauDx0X</a></p>&mdash; Maki@Sunwood AI Labs. (@hAru_mAki_ch) <a href="https://twitter.com/hAru_mAki_ch/status/2014684282988724560?ref_src=twsrc%5Etfw">January 23, 2026</a></blockquote>`}
 		</div>
 	</section>
 {/if}
@@ -907,5 +938,38 @@
 		.related-grid {
 			grid-template-columns: 1fr;
 		}
+	}
+
+	/* Twitter Embed */
+	.twitter-embed {
+		margin-bottom: 80px;
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.8s ease, transform 0.8s ease;
+	}
+
+	.twitter-embed.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	.twitter-embed-container {
+		background: rgba(0, 0, 0, 0.3);
+		border: 1px solid rgba(212, 175, 55, 0.2);
+		border-radius: 16px;
+		padding: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 400px;
+		backdrop-filter: blur(10px);
+	}
+
+	.twitter-embed-container :global(.twitter-tweet) {
+		margin: 0 auto !important;
+	}
+
+	.twitter-embed-container :global(iframe) {
+		max-width: 100% !important;
 	}
 </style>
