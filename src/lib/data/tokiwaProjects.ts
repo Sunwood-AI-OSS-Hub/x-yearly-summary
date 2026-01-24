@@ -358,9 +358,14 @@ export const tokiwaProjects: TokiwaProject[] = [
 		],
 		links: [
 			{
-				url: 'https://aistudio.google.com/',
+				url: 'https://ai.studio/apps/drive/1fJNGxOzSUj-2mVBU2m4jMYL2Dsepz6b?fullscreenApplet=true',
 				label: 'Gemini AI Studio',
 				icon: 'fa-google'
+			},
+			{
+				url: 'https://x.com/hAru_mAki_ch/status/1995538446241464536',
+				label: '実際の弾幕が見れる動画',
+				icon: 'fa-play'
 			},
 			{
 				url: 'https://x.com/hAru_mAki_ch/status/1982393197059063891',
